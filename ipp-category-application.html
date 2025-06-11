@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The application process - Beginning in Ireland</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ipp-page ipp-category">
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header (Same as Homepage) -->
+    <header class="site-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="language-switcher">
+                    <strong>English</strong> | 
+                    <a href="#" lang="ga">Gaeilge</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="wrapper">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="ipp-homepage.html" title="Home">
+                            <img src="images/cio_logo.jpg" alt="Citizens Information logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="main-nav" role="navigation">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">What's New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">My Situation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Find a Centre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Volunteering</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.facebook.com/citizensinformation/" class="nav-link" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel -->
+        <nav class="mobile-nav" role="navigation">
+            <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">My Situation</a></li>
+                <li><a href="#">Find a Centre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section (Smaller strip for category pages) -->
+    <section class="hero ipp-hero ipp-hero-strip">
+        <!-- Just the background image, no content -->
+    </section>
+    
+    <!-- Portal Navigation Bar (Same as homepage) -->
+    <nav class="portal-nav">
+        <div class="wrapper">
+            <div class="portal-nav-content">
+                <!-- Portal Logo/Title - LEFT SIDE -->
+                <div class="portal-branding">
+    <a href="ipp-homepage.html" class="portal-branding-link">
+        <img src="images/ipp-logo.png" alt="Beginning in Ireland" class="portal-logo">
+        <span class="portal-title">Beginning in Ireland</span>
+    </a>
+</div>
+                
+                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+                <div class="portal-nav-right">
+                    <!-- Desktop Links (hidden on mobile) -->
+                    <ul class="portal-links">
+                        <li><a href="pp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+                    </ul>
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <select id="language-select" aria-label="Select language">
+                            <option value="en">English</option>
+                            <!-- Top 5 most used languages -->
+                            <option value="ar">العربية (Arabic)</option>
+                            <option value="ka">ქართული (Georgian)</option>
+                            <option value="so">Soomaali (Somali)</option>
+                            <option value="fr">Français (French)</option>
+                            <option value="ur">اردو (Urdu)</option>
+                            <!-- Visual separator -->
+                            <option disabled aria-label="separator between common and other languages">──── Other Languages ────</option>
+                            <!-- Remaining languages alphabetically -->
+                            <option value="zh">中文 (Chinese)</option>
+                            <option value="fa">دری (Dari)</option>
+                            <option value="ps">پښتو (Pashto)</option>
+                            <option value="pl">Polski (Polish)</option>
+                            <option value="ro">Română (Romanian)</option>
+                            <option value="sn">chiShona (Shona)</option>
+                            <option value="es">Español (Spanish)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Portal Mobile Menu Toggle -->
+                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Portal Mobile Navigation Panel -->
+    <nav class="portal-mobile-nav" role="navigation">
+        <ul>
+            <li><a href="#">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+        </ul>
+        <div class="portal-mobile-language">
+            <label for="mobile-language-select">Language:</label>
+            <select id="mobile-language-select" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="ka">ქართული (Georgian)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="so">Soomaali (Somali)</option>
+                <option value="sn">chiShona (Shona)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="ps">پښتو (Pashto)</option>
+                <option value="fa">دری (Dari)</option>
+                <option value="fr">Français (French)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="pl">Polski (Polish)</option>
+                <option value="ro">Română (Romanian)</option>
+                <option value="zh">中文 (Chinese)</option>
+            </select>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="wrapper">
+            <!-- Breadcrumb and Search Row -->
+            <div class="breadcrumb-search-row">
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <a href="ipp-homepage.html">Beginning in Ireland</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span aria-current="page">The application process</span>
+                </nav>
+                
+                <!-- Search Form -->
+                <form class="search-form category-search" action="#" method="get">
+                    <input type="search" 
+                           class="search-input" 
+                           name="q" 
+                           placeholder="Search Beginning in Ireland..."
+                           aria-label="Search">
+                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                </form>
+            </div>
+            
+            <!-- Category Intro Module (Similar to homepage intro) -->
+            <section class="category-intro-module">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <div class="category-title-with-icon">
+                            <!-- Using the document/application icon from the homepage -->
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-icon">
+                                <path d="M12 8H40L52 20V56H12V8Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M40 8V20H52" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="20" y1="32" x2="44" y2="32" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="20" y1="40" x2="44" y2="40" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="20" y1="48" x2="36" y2="48" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+                                <!-- User profile icon -->
+                                <circle cx="32" cy="20" r="4" stroke="#234c5e" stroke-width="2" fill="none"/>
+                                <path d="M24 28C24 24 27 22 32 22C37 22 40 24 40 28" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <h1>The application process</h1>
+                        </div>
+                        <p>Applying for international protection in Ireland is a structured process designed to assess your need for refugee status or subsidiary protection. This step-by-step guide will help you understand each stage of your application, from initial registration to the final decision.</p>
+                        <p>Learn about required documents, interview preparation, your rights during the process, and what to expect at each stage. Understanding the process helps you provide the information needed for a fair assessment of your application.</p>
+                    </div>
+                    <div class="intro-media">
+                        <div class="video-wrapper">
+                           <iframe width="560" height="315" src="https://www.youtube.com/embed/SnmpeL0O4cg?si=JIS9VHAaZ3iL55Su" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <!-- TODO: Replace with actual application process video URL -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Subcategory Cards Grid -->
+            <section class="subcategory-section">
+                <div class="subcategory-grid">
+                    <!-- Subcategory 1 -->
+                    <a href="ipp-content-registration.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Registration/clipboard icon -->
+                            <rect x="14" y="8" width="36" height="48" rx="2" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 8V12H42V8" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="26" y="4" width="12" height="8" rx="2" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="22" y1="24" x2="42" y2="24" stroke="#234c5e" stroke-width="2"/>
+                            <line x1="22" y1="32" x2="42" y2="32" stroke="#234c5e" stroke-width="2"/>
+                            <line x1="22" y1="40" x2="34" y2="40" stroke="#234c5e" stroke-width="2"/>
+                        </svg>
+                        <h2>First steps and registration</h2>
+                        <p>How to apply for international protection, where to register, what happens on your first day, and receiving your Temporary Residence Certificate (TRC).</p>
+                    </a>
+                    
+                    <!-- Subcategory 2 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Documents/folder icon -->
+                            <path d="M12 20H52V52H12V20Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 20V16C12 14 14 12 16 12H26L30 16H48C50 16 52 18 52 20" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="22" y1="32" x2="42" y2="32" stroke="#234c5e" stroke-width="2"/>
+                            <line x1="22" y1="40" x2="36" y2="40" stroke="#234c5e" stroke-width="2"/>
+                        </svg>
+                        <h2>Required documents</h2>
+                        <p>Essential documents needed for your application, how to obtain missing documents, translation requirements, and keeping your paperwork organized.</p>
+                    </a>
+                    
+                    <!-- Subcategory 3 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Questionnaire/form icon -->
+                            <rect x="12" y="8" width="40" height="48" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="18" y="16" width="4" height="4" fill="#234c5e"/>
+                            <line x1="26" y1="18" x2="46" y2="18" stroke="#234c5e" stroke-width="2"/>
+                            <rect x="18" y="26" width="4" height="4" fill="#234c5e"/>
+                            <line x1="26" y1="28" x2="46" y2="28" stroke="#234c5e" stroke-width="2"/>
+                            <rect x="18" y="36" width="4" height="4" fill="#234c5e"/>
+                            <line x1="26" y1="38" x2="46" y2="38" stroke="#234c5e" stroke-width="2"/>
+                            <rect x="18" y="46" width="4" height="4" fill="#234c5e"/>
+                            <line x1="26" y1="48" x2="40" y2="48" stroke="#234c5e" stroke-width="2"/>
+                        </svg>
+                        <h2>The IPO questionnaire</h2>
+                        <p>Understanding and completing the International Protection Office questionnaire, getting help with forms, and submitting your application correctly.</p>
+                    </a>
+                    
+                    <!-- Subcategory 4 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Interview/conversation icon -->
+                            <circle cx="24" cy="20" r="8" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 48C8 40 14 34 24 34C34 34 40 40 40 48" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="44" cy="24" r="6" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M56 44C56 38 51 34 44 34" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M32 16L36 12L40 16" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M40 20L44 16L48 20" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>Interview preparation</h2>
+                        <p>What to expect during your protection interview, how to prepare, your rights during the interview, interpreters, and getting legal advice.</p>
+                    </a>
+                    
+                    <!-- Subcategory 5 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Legal rights/shield icon -->
+                            <path d="M32 8L48 16V32C48 44 40 52 32 56C24 52 16 44 16 32V16L32 8Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M26 32L30 36L38 28" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>Your rights and entitlements</h2>
+                        <p>Understanding your legal rights during the application process, access to legal aid, confidentiality, and protection while your case is being assessed.</p>
+                    </a>
+                    
+                    <!-- Subcategory 6 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Decision/gavel icon -->
+                            <rect x="28" y="12" width="8" height="32" rx="2" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 40L44 40C46 40 48 42 48 44V48H16V44C16 42 18 40 20 40Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="44" cy="24" r="8" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="8" y1="56" x2="56" y2="56" stroke="#234c5e" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <h2>Decisions and outcomes</h2>
+                        <p>Understanding IPO decisions, types of protection status, what happens after a positive decision, and next steps following your determination.</p>
+                    </a>
+                    
+                    <!-- Subcategory 7 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Appeals/scales icon -->
+                            <path d="M32 12V44" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 12H44" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 24L24 12L32 24" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M32 24L40 12L48 24" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="12" y="44" width="40" height="12" rx="2" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="20" y1="50" x2="32" y2="50" stroke="#234c5e" stroke-width="2"/>
+                        </svg>
+                        <h2>Appeals process</h2>
+                        <p>How to appeal a negative decision, understanding the International Protection Appeals Tribunal, timelines, legal representation, and appeal hearings.</p>
+                    </a>
+                    
+                    <!-- Subcategory 8 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Family reunification icon -->
+                            <circle cx="32" cy="16" r="6" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 36C20 30 25 26 32 26C39 26 44 30 44 36" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="18" cy="28" r="4" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="46" cy="28" r="4" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 44C8 40 11 37 16 37" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M56 44C56 40 53 37 48 37" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M26 48L32 54L38 48" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>Family reunification</h2>
+                        <p>Applying to bring family members to Ireland, eligibility criteria, required documentation, and the family reunification application process.</p>
+                    </a>
+                    
+                    <!-- Subcategory 9 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Support/help icon -->
+                            <circle cx="32" cy="32" r="24" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 24C24 20 27 16 32 16C37 16 40 20 40 24C40 28 37 30 34 32C32 33 32 34 32 36" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="32" cy="44" r="2" fill="#234c5e"/>
+                        </svg>
+                        <h2>Help and support</h2>
+                        <p>Where to get help with your application, legal aid services, support organizations, interpreters, and assistance for vulnerable applicants.</p>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Bottom Divider -->
+            <div class="section-divider"></div>
+        </div>
+    </main>
+    
+    <!-- Footer (Same as Homepage) -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <!-- Categories -->
+                <div class="footer-categories">
+                    <div class="footer-section">
+                        <h3>Find information on...</h3>
+                        <ul>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Social Welfare</a></li>
+                            <li><a href="#">Employment</a></li>
+                            <li><a href="#">Money and Tax</a></li>
+                            <li><a href="#">Moving Country</a></li>
+                            <li><a href="#">Returning to Ireland</a></li>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Education and Training</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>&nbsp;</h3>
+                        <ul>
+                            <li><a href="#">Travel and Recreation</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">Consumer</a></li>
+                            <li><a href="#">Government in Ireland</a></li>
+                            <li><a href="#">Death and Bereavement</a></li>
+                            <li><a href="#">Family and Relationships</a></li>
+                            <li><a href="#">Justice</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- About -->
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Citizens Information</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Privacy statement</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="tel:0818074000">Phone CIPS 0818 07 4000</a> | 
+                    <a href="#">Visit your local CIC</a> | 
+                    <a href="#">View our publications</a>
+                </div>
+                
+                <div class="social-links">
+                    <!-- Social icons would go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

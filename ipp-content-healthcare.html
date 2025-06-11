@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare services - Beginning in Ireland</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ipp-page ipp-content">
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header (Same as Category Page) -->
+    <header class="site-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="language-switcher">
+                    <strong>English</strong> | 
+                    <a href="#" lang="ga">Gaeilge</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="wrapper">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="ipp-index.html" title="Home">
+                            <img src="images/cio_logo.jpg" alt="Citizens Information logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="main-nav" role="navigation">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">What's New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">My Situation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Find a Centre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Volunteering</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.facebook.com/citizensinformation/" class="nav-link" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel -->
+        <nav class="mobile-nav" role="navigation">
+            <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">My Situation</a></li>
+                <li><a href="#">Find a Centre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section (Small strip like category pages) -->
+    <section class="hero ipp-hero ipp-hero-strip">
+        <!-- Just the background image, no content -->
+    </section>
+    
+    <!-- Portal Navigation Bar (Same as category page) -->
+    <nav class="portal-nav">
+        <div class="wrapper">
+            <div class="portal-nav-content">
+                <!-- Portal Logo/Title - LEFT SIDE -->
+                <div class="portal-branding">
+    <a href="ipp-homepage.html" class="portal-branding-link">
+        <img src="images/ipp-logo.png" alt="Beginning in Ireland" class="portal-logo">
+        <span class="portal-title">Beginning in Ireland</span>
+    </a>
+</div>
+                
+                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+                <div class="portal-nav-right">
+                    <!-- Desktop Links (hidden on mobile) -->
+                    <ul class="portal-links">
+                        <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+                    </ul>
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <select id="language-select" aria-label="Select language">
+                            <option value="en">English</option>
+                            <!-- Top 5 most used languages -->
+                            <option value="ar">العربية (Arabic)</option>
+                            <option value="ka">ქართული (Georgian)</option>
+                            <option value="so">Soomaali (Somali)</option>
+                            <option value="fr">Français (French)</option>
+                            <option value="ur">اردو (Urdu)</option>
+                            <!-- Visual separator -->
+                            <option disabled aria-label="separator between common and other languages">──── Other Languages ────</option>
+                            <!-- Remaining languages alphabetically -->
+                            <option value="zh">中文 (Chinese)</option>
+                            <option value="fa">دری (Dari)</option>
+                            <option value="ps">پښتو (Pashto)</option>
+                            <option value="pl">Polski (Polish)</option>
+                            <option value="ro">Română (Romanian)</option>
+                            <option value="sn">chiShona (Shona)</option>
+                            <option value="es">Español (Spanish)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Portal Mobile Menu Toggle -->
+                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Portal Mobile Navigation Panel -->
+    <nav class="portal-mobile-nav" role="navigation">
+        <ul>
+            <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+        </ul>
+        <div class="portal-mobile-language">
+            <label for="mobile-language-select">Language:</label>
+            <select id="mobile-language-select" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="ka">ქართული (Georgian)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="so">Soomaali (Somali)</option>
+                <option value="sn">chiShona (Shona)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="ps">پښتو (Pashto)</option>
+                <option value="fa">دری (Dari)</option>
+                <option value="fr">Français (French)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="pl">Polski (Polish)</option>
+                <option value="ro">Română (Romanian)</option>
+                <option value="zh">中文 (Chinese)</option>
+            </select>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="wrapper">
+            <!-- Breadcrumb and Search Row -->
+            <div class="breadcrumb-search-row">
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <a href="ipp-homepage.html">Beginning in Ireland</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <a href="ipp-category-living.html">Life in Ireland</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span aria-current="page">Healthcare services</span>
+                </nav>
+                
+                <!-- Search Form -->
+                <form class="search-form content-search" action="#" method="get">
+                    <input type="search" 
+                           class="search-input" 
+                           name="q" 
+                           placeholder="Search Beginning in Ireland..."
+                           aria-label="Search">
+                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                </form>
+            </div>
+            
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="content-title">Healthcare services</h1>
+            </div>
+            
+            <!-- Two Column Layout -->
+            <div class="content-layout">
+                <!-- Main Content Column -->
+                <div class="content-main">
+                    <!-- Content Navigation -->
+                    <nav class="content-nav">
+                        <ul>
+                            <li><a href="#medical-card">Medical card</a></li>
+                            <li><a href="#gp-services">GP services</a></li>
+                            <li><a href="#hospital-care">Hospital care</a></li>
+                            <li><a href="#prescriptions">Prescriptions</a></li>
+                            <li><a href="#dental-care">Dental care</a></li>
+                            <li><a href="#mental-health">Mental health support</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Medical Card Section -->
+                    <section id="medical-card">
+                        <h2>Medical card</h2>
+                        <p>As an international protection applicant, you are entitled to a medical card. This card gives you free access to most healthcare services in Ireland.</p>
+                        
+                        <p>Your medical card covers:</p>
+                        <ul>
+                            <li>GP (doctor) visits</li>
+                            <li>Hospital services</li>
+                            <li>Prescription medicines</li>
+                            <li>Some dental and optical services</li>
+                        </ul>
+                        
+                        <p>You should receive your medical card within a few weeks of registering. If you haven't received it, contact the accommodation centre manager or your social worker.</p>
+                    </section>
+                    
+                    <!-- GP Services Section -->
+                    <section id="gp-services">
+                        <h2>GP services</h2>
+                        <p>A GP (General Practitioner) is a family doctor who provides primary healthcare. With your medical card, GP visits are free.</p>
+                        
+                        <p>To see a GP:</p>
+                        <ul>
+                            <li>Register with a local GP who accepts medical cards</li>
+                            <li>Call to make an appointment</li>
+                            <li>Bring your medical card to every visit</li>
+                        </ul>
+                        
+                        <p>Your accommodation centre can help you find a GP in your area.</p>
+                    </section>
+                    
+                    <!-- Hospital Care Section -->
+                    <section id="hospital-care">
+                        <h2>Hospital care</h2>
+                        <p>Hospital services are free with your medical card. This includes:</p>
+                        <ul>
+                            <li>Emergency department visits</li>
+                            <li>Outpatient appointments</li>
+                            <li>Inpatient stays</li>
+                            <li>Maternity services</li>
+                        </ul>
+                        
+                        <p>For emergencies, call 999 or 112. For non-emergencies, you usually need a referral from your GP.</p>
+                    </section>
+                    
+                    <!-- Prescriptions Section -->
+                    <section id="prescriptions">
+                        <h2>Prescriptions</h2>
+                        <p>With a medical card, most prescription medicines cost €1.50 per item, up to a maximum of €15 per month per person.</p>
+                        
+                        <p>To get prescription medicines:</p>
+                        <ul>
+                            <li>Get a prescription from your GP</li>
+                            <li>Take it to any pharmacy</li>
+                            <li>Show your medical card</li>
+                            <li>Pay the prescription charge</li>
+                        </ul>
+                    </section>
+                    
+                    <!-- Dental Care Section -->
+                    <section id="dental-care">
+                        <h2>Dental care</h2>
+                        <p>Emergency dental treatment is free with a medical card. Routine dental care has limited coverage.</p>
+                        
+                        <p>Free dental services include:</p>
+                        <ul>
+                            <li>Oral examinations</li>
+                            <li>Emergency pain relief</li>
+                            <li>Extractions when necessary</li>
+                            <li>Some fillings</li>
+                        </ul>
+                        
+                        <p>You need approval for some treatments. Ask your dentist about what's covered.</p>
+                    </section>
+                    
+                    <!-- Mental Health Section -->
+                    <section id="mental-health">
+                        <h2>Mental health support</h2>
+                        <p>Mental health services are available and important for your wellbeing. Support includes:</p>
+                        
+                        <ul>
+                            <li>Counselling services</li>
+                            <li>Psychology appointments</li>
+                            <li>Psychiatric care if needed</li>
+                            <li>Support groups</li>
+                        </ul>
+                        
+                        <p>Your GP can refer you to mental health services. Some organisations also provide free counselling for asylum seekers.</p>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <aside class="content-sidebar">
+                    <!-- Related Documents Module -->
+                    <div class="sidebar-module related-documents">
+                        <h3>Find out more</h3>
+                        <ul class="related-list">
+                            <li>
+                                <a href="#">Education system</a>
+                                <p>Information about schools, enrolling children, and adult education opportunities.</p>
+                            </li>
+                            <li>
+                                <a href="#">Money and benefits</a>
+                                <p>Understanding social welfare payments and financial support available.</p>
+                            </li>
+                            <li>
+                                <a href="#">Emergency situations</a>
+                                <p>What to do in medical emergencies and crisis situations.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                   
+                </aside>
+            </div>
+            
+            <!-- Bottom Divider -->
+            <div class="section-divider"></div>
+        </div>
+    </main>
+    
+    <!-- Footer (Same as Homepage) -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <!-- Categories -->
+                <div class="footer-categories">
+                    <div class="footer-section">
+                        <h3>Find information on...</h3>
+                        <ul>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Social Welfare</a></li>
+                            <li><a href="#">Employment</a></li>
+                            <li><a href="#">Money and Tax</a></li>
+                            <li><a href="#">Moving Country</a></li>
+                            <li><a href="#">Returning to Ireland</a></li>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Education and Training</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>&nbsp;</h3>
+                        <ul>
+                            <li><a href="#">Travel and Recreation</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">Consumer</a></li>
+                            <li><a href="#">Government in Ireland</a></li>
+                            <li><a href="#">Death and Bereavement</a></li>
+                            <li><a href="#">Family and Relationships</a></li>
+                            <li><a href="#">Justice</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- About -->
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Citizens Information</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Privacy statement</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="tel:0818074000">Phone CIPS 0818 07 4000</a> | 
+                    <a href="#">Visit your local CIC</a> | 
+                    <a href="#">View our publications</a>
+                </div>
+                
+                <div class="social-links">
+                    <!-- Social icons would go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

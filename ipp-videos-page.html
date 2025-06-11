@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - Beginning in Ireland</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ipp-page ipp-videos">
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header (Same as other pages) -->
+    <header class="site-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="language-switcher">
+                    <strong>English</strong> | 
+                    <a href="#" lang="ga">Gaeilge</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="wrapper">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="ipp-index.html" title="Home">
+                            <img src="images/cio_logo.jpg" alt="Citizens Information logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="main-nav" role="navigation">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">What's New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">My Situation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Find a Centre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Volunteering</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.facebook.com/citizensinformation/" class="nav-link" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel -->
+        <nav class="mobile-nav" role="navigation">
+            <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">My Situation</a></li>
+                <li><a href="#">Find a Centre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section (Small strip) -->
+    <section class="hero ipp-hero ipp-hero-strip">
+        <!-- Just the background image, no content -->
+    </section>
+    
+    <!-- Portal Navigation Bar -->
+    <nav class="portal-nav">
+        <div class="wrapper">
+            <div class="portal-nav-content">
+                <!-- Portal Logo/Title - LEFT SIDE -->
+                <div class="portal-branding">
+                    <a href="ipp-homepage.html" class="portal-branding-link">
+                        <img src="images/ipp-logo.png" alt="Beginning in Ireland" class="portal-logo">
+                        <span class="portal-title">Beginning in Ireland</span>
+                    </a>
+                </div>
+                
+                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+                <div class="portal-nav-right">
+                    <!-- Desktop Links (hidden on mobile) -->
+                    <ul class="portal-links">
+                        <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html" class="active">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+                    </ul>
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <select id="language-select" aria-label="Select language">
+                            <option value="en">English</option>
+                            <option value="ar">العربية (Arabic)</option>
+                            <option value="ka">ქართული (Georgian)</option>
+                            <option value="so">Soomaali (Somali)</option>
+                            <option value="fr">Français (French)</option>
+                            <option value="ur">اردو (Urdu)</option>
+                            <option disabled>──── Other Languages ────</option>
+                            <option value="zh">中文 (Chinese)</option>
+                            <option value="fa">دری (Dari)</option>
+                            <option value="ps">پښتو (Pashto)</option>
+                            <option value="pl">Polski (Polish)</option>
+                            <option value="ro">Română (Romanian)</option>
+                            <option value="sn">chiShona (Shona)</option>
+                            <option value="es">Español (Spanish)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Portal Mobile Menu Toggle -->
+                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Portal Mobile Navigation Panel -->
+    <nav class="portal-mobile-nav" role="navigation">
+        <ul>
+            <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+        </ul>
+        <div class="portal-mobile-language">
+            <label for="mobile-language-select">Language:</label>
+            <select id="mobile-language-select" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="ka">ქართული (Georgian)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="so">Soomaali (Somali)</option>
+                <option value="sn">chiShona (Shona)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="ps">پښتو (Pashto)</option>
+                <option value="fa">دری (Dari)</option>
+                <option value="fr">Français (French)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="pl">Polski (Polish)</option>
+                <option value="ro">Română (Romanian)</option>
+                <option value="zh">中文 (Chinese)</option>
+            </select>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="wrapper">
+            <!-- Breadcrumb and Search Row -->
+            <div class="breadcrumb-search-row">
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <a href="ipp-homepage.html">Beginning in Ireland</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span aria-current="page">Videos</span>
+                </nav>
+                
+                <!-- Search Form -->
+                <form class="search-form content-search" action="#" method="get">
+                    <input type="search" 
+                           class="search-input" 
+                           name="q" 
+                           placeholder="Search Beginning in Ireland..."
+                           aria-label="Search videos">
+                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                </form>
+            </div>
+            
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="content-title">Videos</h1>
+                <p class="page-intro">Watch helpful videos about life in Ireland, the application process, and practical guidance for international protection applicants. All videos are available with subtitles in multiple languages.</p>
+            </div>
+            
+            <!-- Video Categories Filter -->
+            <div class="video-filters">
+                <button class="filter-btn active" data-category="all">All Videos</button>
+                <button class="filter-btn" data-category="getting-started">Getting Started</button>
+                <button class="filter-btn" data-category="application">Application Process</button>
+                <button class="filter-btn" data-category="daily-life">Daily Life</button>
+                <button class="filter-btn" data-category="rights">Your Rights</button>
+                <button class="filter-btn" data-category="culture">Irish Culture</button>
+            </div>
+            
+            <!-- Featured Video Section -->
+            <section class="featured-video-section">
+                <h2 class="section-title">Featured Video</h2>
+                <div class="featured-video">
+                    <div class="featured-video-player">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/O-LG-bkUiig" 
+                                    title="Welcome to Beginning in Ireland" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="featured-video-info">
+                        <h3>Welcome to Beginning in Ireland</h3>
+                        
+                        <p>An introduction to the Beginning in Ireland portal and how it can help you navigate your journey through the international protection process.</p>
+                        <div class="video-languages">
+                            <span class="language-label">Subtitles available:</span>
+                            <span class="language-tag">English</span>
+                            <span class="language-tag">العربية</span>
+                            <span class="language-tag">Français</span>
+                            <span class="language-tag">ქართული</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- All Videos Grid -->
+            <section class="videos-grid-section">
+                <h2 class="section-title">All Videos</h2>
+                <div class="videos-grid">
+                    <!-- Video Card 1 -->
+                    <div class="video-card" data-category="getting-started">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-1.jpg" alt="Your first day at IPO">
+                            <div class="play-button">
+                                <iframe src="https://www.youtube.com/embed/O-LG-bkUiig" 
+                                    title="Welcome to Beginning in Ireland" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                            </div>
+                            <span class="video-duration">8:15</span>
+                        </div>
+                        <div class="video-info">
+                            <h3><a href="#">Your first day at IPO</a></h3>
+                            <p>What to expect when you register for international protection at the IPO office.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 2 -->
+                    <div class="video-card" data-category="application">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-2.jpg" alt="Completing your questionnaire">
+                            <div class="play-button">
+                                <iframe src="https://www.youtube.com/embed/O-LG-bkUiig" 
+                                    title="Welcome to Beginning in Ireland" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                            </div>
+                            <span class="video-duration">12:30</span>
+                        </div>
+                        <div class="video-info">
+                            <h3><a href="#">Completing your questionnaire</a></h3>
+                            <p>Step-by-step guide to filling out the IPO questionnaire correctly.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 3 -->
+                    <div class="video-card" data-category="daily-life">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-3.jpg" alt="Life in Direct Provision">
+                            <div class="play-button">
+                                <iframe src="https://www.youtube.com/embed/O-LG-bkUiig" 
+                                    title="Welcome to Beginning in Ireland" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                            </div>
+                            <span class="video-duration">10:45</span>
+                        </div>
+                        <div class="video-info">
+                            <h3><a href="#">Life in Direct Provision</a></h3>
+                            <p>Understanding daily routines, facilities, and services in accommodation centres.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 4 -->
+                    <div class="video-card" data-category="rights">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-4.jpg" alt="Your healthcare rights">
+                            <div class="play-button">
+                                <iframe src="https://www.youtube.com/embed/O-LG-bkUiig" 
+                                    title="Welcome to Beginning in Ireland" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                            </div>
+                            <span class="video-duration">6:20</span>
+                        </div>
+                        <div class="video-info">
+                            <h3><a href="#">Your healthcare rights</a></h3>
+                            <p>How to access medical services and use your medical card in Ireland.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 5 -->
+                    <div class="video-card" data-category="culture">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-5.jpg" alt="Irish culture and customs">
+                            <div class="play-button">
+                               <iframe src="https://www.youtube.com/embed/O-LG-bkUiig" 
+                                    title="Welcome to Beginning in Ireland" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                            </div>
+                            <span class="video-duration">9:00</span>
+                        </div>
+                        <div class="video-info">
+                            <h3><a href="#">Irish culture and customs</a></h3>
+                            <p>An introduction to Irish traditions, social norms, and cultural practices.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 6 -->
+                    <div class="video-card" data-category="application">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-6.jpg" alt="Preparing for your interview">
+                            <div class="play-button">
+                                <iframe src="https://www.youtube.com/embed/O-LG-bkUiig" 
+                                    title="Welcome to Beginning in Ireland" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                            </div>
+                            <span class="video-duration">15:10</span>
+                        </div>
+                        <div class="video-info">
+                            <h3><a href="#">Preparing for your interview</a></h3>
+                            <p>Tips and advice for your international protection interview.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="load-more-btn">Load More Videos</button>
+                </div>
+            </section>
+            
+            <!-- Bottom Divider -->
+            <div class="section-divider"></div>
+        </div>
+    </main>
+    
+    <!-- Footer (Same as Homepage) -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <!-- Categories -->
+                <div class="footer-categories">
+                    <div class="footer-section">
+                        <h3>Find information on...</h3>
+                        <ul>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Social Welfare</a></li>
+                            <li><a href="#">Employment</a></li>
+                            <li><a href="#">Money and Tax</a></li>
+                            <li><a href="#">Moving Country</a></li>
+                            <li><a href="#">Returning to Ireland</a></li>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Education and Training</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>&nbsp;</h3>
+                        <ul>
+                            <li><a href="#">Travel and Recreation</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">Consumer</a></li>
+                            <li><a href="#">Government in Ireland</a></li>
+                            <li><a href="#">Death and Bereavement</a></li>
+                            <li><a href="#">Family and Relationships</a></li>
+                            <li><a href="#">Justice</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- About -->
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Citizens Information</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Privacy statement</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="tel:0818074000">Phone CIPS 0818 07 4000</a> | 
+                    <a href="#">Visit your local CIC</a> | 
+                    <a href="#">View our publications</a>
+                </div>
+                
+                <div class="social-links">
+                    <!-- Social icons would go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

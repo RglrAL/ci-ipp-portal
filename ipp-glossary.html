@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary - Beginning in Ireland</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ipp-page ipp-glossary">
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header (Same as other pages) -->
+    <header class="site-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="language-switcher">
+                    <strong>English</strong> | 
+                    <a href="#" lang="ga">Gaeilge</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="wrapper">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="ipp-homepage.html" title="Home">
+                            <img src="images/cio_logo.jpg" alt="Citizens Information logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="main-nav" role="navigation">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">What's New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">My Situation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Find a Centre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Volunteering</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.facebook.com/citizensinformation/" class="nav-link" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel -->
+        <nav class="mobile-nav" role="navigation">
+            <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">My Situation</a></li>
+                <li><a href="#">Find a Centre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section (Small strip) -->
+    <section class="hero ipp-hero ipp-hero-strip">
+        <!-- Just the background image, no content -->
+    </section>
+    
+    <!-- Portal Navigation Bar -->
+    <nav class="portal-nav">
+        <div class="wrapper">
+            <div class="portal-nav-content">
+                <!-- Portal Logo/Title - LEFT SIDE -->
+                <div class="portal-branding">
+                    <a href="ipp-homepage.html" class="portal-branding-link">
+                        <img src="images/ipp-logo.png" alt="Beginning in Ireland" class="portal-logo">
+                        <span class="portal-title">Beginning in Ireland</span>
+                    </a>
+                </div>
+                
+                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+                <div class="portal-nav-right">
+                    <!-- Desktop Links (hidden on mobile) -->
+                    <ul class="portal-links">
+                        <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html" class="active">Glossary</a></li>
+                    </ul>
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <select id="language-select" aria-label="Select language">
+                            <option value="en">English</option>
+                            <option value="ar">العربية (Arabic)</option>
+                            <option value="ka">ქართული (Georgian)</option>
+                            <option value="so">Soomaali (Somali)</option>
+                            <option value="fr">Français (French)</option>
+                            <option value="ur">اردو (Urdu)</option>
+                            <option disabled>──── Other Languages ────</option>
+                            <option value="zh">中文 (Chinese)</option>
+                            <option value="fa">دری (Dari)</option>
+                            <option value="ps">پښتو (Pashto)</option>
+                            <option value="pl">Polski (Polish)</option>
+                            <option value="ro">Română (Romanian)</option>
+                            <option value="sn">chiShona (Shona)</option>
+                            <option value="es">Español (Spanish)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Portal Mobile Menu Toggle -->
+                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Portal Mobile Navigation Panel -->
+    <nav class="portal-mobile-nav" role="navigation">
+        <ul>
+            <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+        </ul>
+        <div class="portal-mobile-language">
+            <label for="mobile-language-select">Language:</label>
+            <select id="mobile-language-select" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="ka">ქართული (Georgian)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="so">Soomaali (Somali)</option>
+                <option value="sn">chiShona (Shona)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="ps">پښتو (Pashto)</option>
+                <option value="fa">دری (Dari)</option>
+                <option value="fr">Français (French)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="pl">Polski (Polish)</option>
+                <option value="ro">Română (Romanian)</option>
+                <option value="zh">中文 (Chinese)</option>
+            </select>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="wrapper">
+            <!-- Breadcrumb and Search Row -->
+            <div class="breadcrumb-search-row">
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <a href="ipp-homepage.html">Beginning in Ireland</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span aria-current="page">Glossary</span>
+                </nav>
+                
+                <!-- Search Form -->
+                <form class="search-form content-search" action="#" method="get">
+                    <input type="search" 
+                           class="search-input" 
+                           name="q" 
+                           placeholder="Search Beginning in Ireland..."
+                           aria-label="Search glossary">
+                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                </form>
+            </div>
+            
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="content-title">Glossary</h1>
+                <p class="page-intro">This glossary explains important terms and abbreviations you'll encounter during the international protection process in Ireland. Click on any letter below to jump to that section.</p>
+            </div>
+            
+            <!-- Alphabet Navigation -->
+            <nav class="alphabet-nav" aria-label="Alphabetical navigation">
+                <ul class="alphabet-list">
+                    <li><a href="#letter-a" class="alphabet-link">A</a></li>
+                    <li><a href="#letter-b" class="alphabet-link">B</a></li>
+                    <li><a href="#letter-c" class="alphabet-link">C</a></li>
+                    <li><a href="#letter-d" class="alphabet-link">D</a></li>
+                    <li><a href="#letter-e" class="alphabet-link">E</a></li>
+                    <li><a href="#letter-f" class="alphabet-link">F</a></li>
+                    <li><a href="#letter-g" class="alphabet-link">G</a></li>
+                    <li><a href="#letter-h" class="alphabet-link">H</a></li>
+                    <li><a href="#letter-i" class="alphabet-link">I</a></li>
+                    <li><span class="alphabet-link disabled">J</span></li>
+                    <li><span class="alphabet-link disabled">K</span></li>
+                    <li><a href="#letter-l" class="alphabet-link">L</a></li>
+                    <li><a href="#letter-m" class="alphabet-link">M</a></li>
+                    <li><a href="#letter-n" class="alphabet-link">N</a></li>
+                    <li><a href="#letter-o" class="alphabet-link">O</a></li>
+                    <li><a href="#letter-p" class="alphabet-link">P</a></li>
+                    <li><span class="alphabet-link disabled">Q</span></li>
+                    <li><a href="#letter-r" class="alphabet-link">R</a></li>
+                    <li><a href="#letter-s" class="alphabet-link">S</a></li>
+                    <li><a href="#letter-t" class="alphabet-link">T</a></li>
+                    <li><a href="#letter-u" class="alphabet-link">U</a></li>
+                    <li><a href="#letter-v" class="alphabet-link">V</a></li>
+                    <li><a href="#letter-w" class="alphabet-link">W</a></li>
+                    <li><span class="alphabet-link disabled">X</span></li>
+                    <li><span class="alphabet-link disabled">Y</span></li>
+                    <li><span class="alphabet-link disabled">Z</span></li>
+                </ul>
+            </nav>
+            
+            <!-- Glossary Content -->
+            <div class="glossary-content">
+                <!-- Letter A -->
+                <section id="letter-a" class="glossary-section">
+                    <h2 class="glossary-letter">A</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="accommodation-centre">Accommodation Centre</dt>
+                        <dd>A place where people seeking international protection can live while their application is being processed. Also known as Direct Provision centres.</dd>
+                        
+                        <dt id="appeal">Appeal</dt>
+                        <dd>The process of asking a higher authority to review a decision about your application. You have the right to appeal negative decisions to the International Protection Appeals Tribunal (IPAT).</dd>
+                        
+                        <dt id="asylum">Asylum</dt>
+                        <dd>Protection given by a country to someone fleeing persecution in their home country. See also: <a href="#international-protection">International Protection</a></dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter B -->
+                <section id="letter-b" class="glossary-section">
+                    <h2 class="glossary-letter">B</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="biometrics">Biometrics</dt>
+                        <dd>Your fingerprints and photograph taken during registration. These help confirm your identity throughout the process.</dd>
+                        
+                        <dt id="breach">Breach</dt>
+                        <dd>Breaking a rule or not following a requirement. For example, not reporting to GNIB when required could be considered a breach of your conditions.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter C -->
+                <section id="letter-c" class="glossary-section">
+                    <h2 class="glossary-letter">C</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="case-worker">Case Worker</dt>
+                        <dd>The IPO official assigned to review your application and conduct your interview.</dd>
+                        
+                        <dt id="coi">COI (Country of Origin Information)</dt>
+                        <dd>Official information about conditions in your home country used to assess your application.</dd>
+                        
+                        <dt id="credibility">Credibility</dt>
+                        <dd>How believable your story is. The IPO will assess whether your account of events is credible when making their decision.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter D -->
+                <section id="letter-d" class="glossary-section">
+                    <h2 class="glossary-letter">D</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="deportation-order">Deportation Order</dt>
+                        <dd>An official order requiring you to leave Ireland. This is issued if your application and appeals are unsuccessful.</dd>
+                        
+                        <dt id="direct-provision">Direct Provision</dt>
+                        <dd>The system of accommodation and basic services provided to people seeking international protection in Ireland. See also: <a href="#accommodation-centre">Accommodation Centre</a></dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter E -->
+                <section id="letter-e" class="glossary-section">
+                    <h2 class="glossary-letter">E</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="eurodac">EURODAC</dt>
+                        <dd>A European database of fingerprints used to identify if you have made an application in another EU country.</dd>
+                        
+                        <dt id="examination">Examination</dt>
+                        <dd>The process of reviewing your application, including your interview and all supporting documents.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter F -->
+                <section id="letter-f" class="glossary-section">
+                    <h2 class="glossary-letter">F</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="family-reunification">Family Reunification</dt>
+                        <dd>The right to bring certain family members to join you in Ireland if you receive international protection.</dd>
+                        
+                        <dt id="first-instance">First Instance Decision</dt>
+                        <dd>The initial decision made by the IPO on your application, before any appeals.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter G -->
+                <section id="letter-g" class="glossary-section">
+                    <h2 class="glossary-letter">G</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="gnib">GNIB (Garda National Immigration Bureau)</dt>
+                        <dd>The police unit that handles immigration matters. You must register with them if required. Now part of ISD (Immigration Service Delivery).</dd>
+                        
+                        <dt id="geneva-convention">Geneva Convention</dt>
+                        <dd>The 1951 international agreement that defines who is a refugee and outlines their rights.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter H -->
+                <section id="letter-h" class="glossary-section">
+                    <h2 class="glossary-letter">H</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="habitual-residence">Habitual Residence</dt>
+                        <dd>A condition you must meet to access certain social welfare benefits. It means you have been living in Ireland for a certain time and intend to stay.</dd>
+                        
+                        <dt id="humanitarian-leave">Humanitarian Leave to Remain</dt>
+                        <dd>Permission to stay in Ireland granted by the Minister for Justice on humanitarian grounds, even if you don't qualify for international protection.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter I -->
+                <section id="letter-i" class="glossary-section">
+                    <h2 class="glossary-letter">I</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="ipo">IPO (International Protection Office)</dt>
+                        <dd>The government office that processes applications for international protection in Ireland. Located at 79-83 Lower Mount Street, Dublin 2.</dd>
+                        
+                        <dt id="ipat">IPAT (International Protection Appeals Tribunal)</dt>
+                        <dd>The independent body that hears appeals against negative decisions from the IPO.</dd>
+                        
+                        <dt id="international-protection">International Protection</dt>
+                        <dd>The official term for refugee status and subsidiary protection in Ireland. This replaced the older term "asylum".</dd>
+                        
+                        <dt id="interpreter">Interpreter</dt>
+                        <dd>A person who translates spoken communication between languages. You have the right to an interpreter during your interview if needed.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter L -->
+                <section id="letter-l" class="glossary-section">
+                    <h2 class="glossary-letter">L</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="legal-aid">Legal Aid</dt>
+                        <dd>Free or low-cost legal help. The Legal Aid Board provides lawyers to help with your international protection application.</dd>
+                        
+                        <dt id="leave-to-remain">Leave to Remain</dt>
+                        <dd>Permission to stay in Ireland legally. Different types include humanitarian leave, permission to remain, and leave based on international protection.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter M -->
+                <section id="letter-m" class="glossary-section">
+                    <h2 class="glossary-letter">M</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="medical-card">Medical Card</dt>
+                        <dd>A card that gives you free access to most health services in Ireland. Most international protection applicants are entitled to a medical card.</dd>
+                        
+                        <dt id="minor">Minor</dt>
+                        <dd>A person under 18 years of age. Unaccompanied minors receive special protection and support. See also: <a href="#unaccompanied-minor">Unaccompanied Minor</a></dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter N -->
+                <section id="letter-n" class="glossary-section">
+                    <h2 class="glossary-letter">N</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="non-refoulement">Non-refoulement</dt>
+                        <dd>The principle that protects you from being returned to a country where you face serious threats to your life or freedom.</dd>
+                        
+                        <dt id="notice">Notice of Appeal</dt>
+                        <dd>The formal document you submit to appeal a negative decision. You usually have 15 working days to submit this.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter O -->
+                <section id="letter-o" class="glossary-section">
+                    <h2 class="glossary-letter">O</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="oral-hearing">Oral Hearing</dt>
+                        <dd>An in-person appeal hearing before the IPAT where you can present your case and answer questions.</dd>
+                        
+                        <dt id="own-door">Own Door Accommodation</dt>
+                        <dd>Independent housing instead of living in an accommodation centre. Some applicants may be eligible for this after a certain period.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter P -->
+                <section id="letter-p" class="glossary-section">
+                    <h2 class="glossary-letter">P</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="permission-to-remain">Permission to Remain</dt>
+                        <dd>Legal permission to stay in Ireland for a specific period. This can be granted for various reasons including international protection.</dd>
+                        
+                        <dt id="persecution">Persecution</dt>
+                        <dd>Serious harm or threats because of your race, religion, nationality, political opinion, or membership of a particular social group.</dd>
+                        
+                        <dt id="pps">PPS Number</dt>
+                        <dd>Personal Public Service Number - a unique reference number for accessing public services in Ireland. You'll receive this after registering your application.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter R -->
+                <section id="letter-r" class="glossary-section">
+                    <h2 class="glossary-letter">R</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="refugee-status">Refugee Status</dt>
+                        <dd>Protection granted if you cannot return to your country due to persecution based on race, religion, nationality, political opinion, or membership of a particular social group.</dd>
+                        
+                        <dt id="reception-conditions">Reception Conditions</dt>
+                        <dd>The standards of accommodation, food, healthcare, and other services that must be provided to international protection applicants.</dd>
+                        
+                        <dt id="reporting">Reporting</dt>
+                        <dd>The requirement to regularly present yourself to immigration authorities or Gardaí as directed.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter S -->
+                <section id="letter-s" class="glossary-section">
+                    <h2 class="glossary-letter">S</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="safe-country">Safe Country</dt>
+                        <dd>A country considered safe for returns. If you traveled through or have connections to a safe country, this may affect your application.</dd>
+                        
+                        <dt id="subsidiary-protection">Subsidiary Protection</dt>
+                        <dd>Protection granted if you don't qualify as a refugee but would face serious harm if returned to your country.</dd>
+                        
+                        <dt id="single-procedure">Single Procedure</dt>
+                        <dd>The system where applications for refugee status, subsidiary protection, and permission to remain are decided together.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter T -->
+                <section id="letter-t" class="glossary-section">
+                    <h2 class="glossary-letter">T</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="trc">TRC (Temporary Residence Certificate)</dt>
+                        <dd>The identity document issued to international protection applicants. You must carry this at all times and renew it as required.</dd>
+                        
+                        <dt id="transfer">Transfer</dt>
+                        <dd>Moving between accommodation centres, or being sent to another EU country under Dublin Regulation rules.</dd>
+                        
+                        <dt id="translation">Translation</dt>
+                        <dd>Converting written documents from one language to another. Important documents not in English or Irish must be translated.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter U -->
+                <section id="letter-u" class="glossary-section">
+                    <h2 class="glossary-letter">U</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="unaccompanied-minor">Unaccompanied Minor</dt>
+                        <dd>A person under 18 who arrives in Ireland without a parent or guardian. They receive special care and protection from TUSLA.</dd>
+                        
+                        <dt id="unhcr">UNHCR</dt>
+                        <dd>United Nations High Commissioner for Refugees - the UN agency that protects refugees worldwide.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter V -->
+                <section id="letter-v" class="glossary-section">
+                    <h2 class="glossary-letter">V</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="voluntary-return">Voluntary Return</dt>
+                        <dd>Choosing to return to your home country with assistance from IOM (International Organization for Migration).</dd>
+                        
+                        <dt id="vulnerable-person">Vulnerable Person</dt>
+                        <dd>Someone who needs special care, such as unaccompanied minors, elderly people, pregnant women, or people with serious illnesses.</dd>
+                    </dl>
+                </section>
+                
+                <!-- Letter W -->
+                <section id="letter-w" class="glossary-section">
+                    <h2 class="glossary-letter">W</h2>
+                    
+                    <dl class="glossary-list">
+                        <dt id="withdrawal">Withdrawal</dt>
+                        <dd>Officially stopping your application for international protection. This is a serious decision that cannot easily be reversed.</dd>
+                        
+                        <dt id="work-permit">Work Permit</dt>
+                        <dd>Permission to work in Ireland. International protection applicants can apply for this after 5 months if no first instance decision has been made.</dd>
+                    </dl>
+                </section>
+            </div>
+            
+            <!-- Back to top link -->
+            <div class="back-to-top-wrapper">
+                <a href="#main-content" class="back-to-top">Back to top ↑</a>
+            </div>
+            
+            <!-- Bottom Divider -->
+            <div class="section-divider"></div>
+        </div>
+    </main>
+    
+    <!-- Footer (Same as other pages) -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <!-- Categories -->
+                <div class="footer-categories">
+                    <div class="footer-section">
+                        <h3>Find information on...</h3>
+                        <ul>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Social Welfare</a></li>
+                            <li><a href="#">Employment</a></li>
+                            <li><a href="#">Money and Tax</a></li>
+                            <li><a href="#">Moving Country</a></li>
+                            <li><a href="#">Returning to Ireland</a></li>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Education and Training</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>&nbsp;</h3>
+                        <ul>
+                            <li><a href="#">Travel and Recreation</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">Consumer</a></li>
+                            <li><a href="#">Government in Ireland</a></li>
+                            <li><a href="#">Death and Bereavement</a></li>
+                            <li><a href="#">Family and Relationships</a></li>
+                            <li><a href="#">Justice</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- About -->
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Citizens Information</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Privacy statement</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="tel:0818074000">Phone CIPS 0818 07 4000</a> | 
+                    <a href="#">Visit your local CIC</a> | 
+                    <a href="#">View our publications</a>
+                </div>
+                
+                <div class="social-links">
+                    <!-- Social icons would go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

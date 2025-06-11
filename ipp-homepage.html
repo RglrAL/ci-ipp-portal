@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginning in Ireland - International Protection Portal</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ipp-page">
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header (Same as CI) -->
+    <header class="site-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="language-switcher">
+                    <strong>English</strong> | 
+                    <a href="#" lang="ga">Gaeilge</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="wrapper">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="ipp-index.html" title="Home">
+                            <img src="images/cio_logo.jpg" alt="Citizens Information logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="main-nav" role="navigation">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">What's New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">My Situation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Find a Centre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Volunteering</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.facebook.com/citizensinformation/" class="nav-link" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- SINGLE Mobile Menu Toggle - NO CONTAINER -->
+                   <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel (Hidden by default, shown when hamburger clicked) -->
+        <nav class="mobile-nav" role="navigation">
+            <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">My Situation</a></li>
+                <li><a href="#">Find a Centre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero ipp-hero">
+        <div class="hero-content">
+            <!-- Search Box - Top Right (SAME AS CI) -->
+            <div class="hero-search">
+                <form class="search-form" action="#" method="get">
+                    <input type="search" 
+                           class="search-input" 
+                           name="q" 
+                           placeholder="Search Beginning in Ireland..."
+                           aria-label="Search">
+                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portal Navigation Bar (Below Hero) - STAYS VISIBLE ON MOBILE -->
+    <nav class="portal-nav">
+        <div class="wrapper">
+            <div class="portal-nav-content">
+                <!-- Portal Logo/Title - LEFT SIDE -->
+<div class="portal-branding">
+    <a href="ipp-homepage.html" class="portal-branding-link">
+        <img src="images/ipp-logo.png" alt="Beginning in Ireland" class="portal-logo">
+        <span class="portal-title">Beginning in Ireland</span>
+    </a>
+</div>
+                
+                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+                <div class="portal-nav-right">
+                    <!-- Desktop Links (hidden on mobile) -->
+                    <ul class="portal-links">
+                        <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+                    </ul>
+                    
+                    <!-- Language Selector (hidden on mobile) -->
+                    <div class="language-selector">
+    <select id="language-select" aria-label="Select language">
+        <option value="en">English</option>
+        <!-- Top 5 most used languages -->
+        <option value="ar">العربية (Arabic)</option>
+        <option value="ka">ქართული (Georgian)</option>
+        <option value="so">Soomaali (Somali)</option>
+        <option value="fr">Français (French)</option>
+        <option value="ur">اردو (Urdu)</option>
+        <!-- Visual separator -->
+        <option disabled aria-label="separator between common and other languages">
+ 		──── Other Languages ────</option>
+        <!-- Remaining languages alphabetically -->
+        <option value="zh">中文 (Chinese)</option>
+        <option value="fa">دری (Dari)</option>
+        <option value="ps">پښتو (Pashto)</option>
+        <option value="pl">Polski (Polish)</option>
+        <option value="ro">Română (Romanian)</option>
+        <option value="sn">chiShona (Shona)</option>
+        <option value="es">Español (Spanish)</option>
+    </select>
+</div>
+                    
+                    <!-- Portal Mobile Menu Toggle (shown only on mobile) -->
+                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Portal Mobile Navigation Panel (Hidden by default, shown when portal hamburger clicked) -->
+    <nav class="portal-mobile-nav" role="navigation">
+        <ul>
+            <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+        </ul>
+        <div class="portal-mobile-language">
+            <label for="mobile-language-select">Language:</label>
+            <select id="mobile-language-select" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="ka">ქართული (Georgian)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="so">Soomaali (Somali)</option>
+                <option value="sn">chiShona (Shona)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="ps">پښتو (Pashto)</option>
+                <option value="fa">دری (Dari)</option>
+                <option value="fr">Français (French)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="pl">Polski (Polish)</option>
+                <option value="ro">Română (Romanian)</option>
+                <option value="zh">中文 (Chinese)</option>
+            </select>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="wrapper">
+            <!-- Intro Text/Video Module -->
+            <section class="intro-module">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h1>Welcome to Beginning in Ireland</h1>
+                        <p>This portal provides essential information for people seeking international protection in Ireland. Find clear, practical guidance about the application process, living in accommodation centres, and building your life in Ireland.</p>
+                        <p>All information is available in multiple languages and designed to help you navigate your journey with confidence. Whether you're just arriving or have been here for some time, we're here to support you with accurate, up-to-date information about your rights and entitlements. we're here to support you with accurate, up-to-date information about your rights and entitlements.
+                        </p>
+                    </div>
+                    <div class="intro-media">
+                        <div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/O-LG-bkUiig" 
+        title="Welcome to Beginning in Ireland" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Category Cards -->
+            <section class="portal-categories">
+                <div class="category-cards">
+                    <!-- Category 1 -->
+                    <a href="ipp-category-accommodation.html" class="portal-category-card">
+                       
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M32 8L8 28V56H24V40C24 37.7909 25.7909 36 28 36H36C38.2091 36 40 37.7909 40 40V56H56V28L32 8Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4 32L32 8L60 32" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="20" y="20" width="8" height="8" stroke="#234c5e" stroke-width="2"/>
+  <rect x="36" y="20" width="8" height="8" stroke="#234c5e" stroke-width="2"/>
+</svg>
+                        
+                        <h2>Living in an accommodation centre</h2>
+                        <p>Information about daily life, facilities, services and your rights while living in Direct Provision or other accommodation centres. Find practical guidance on meals, healthcare, education access and community integration.</p>
+                    </a>
+                    
+                    <!-- Category 2 -->
+                    <a href="ipp-category-application.html" class="portal-category-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-icon">
+                                <path d="M12 8H40L52 20V56H12V8Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M40 8V20H52" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="20" y1="32" x2="44" y2="32" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="20" y1="40" x2="44" y2="40" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="20" y1="48" x2="36" y2="48" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+                                <!-- User profile icon -->
+                                <circle cx="32" cy="20" r="4" stroke="#234c5e" stroke-width="2" fill="none"/>
+                                <path d="M24 28C24 24 27 22 32 22C37 22 40 24 40 28" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        <h2>The application process</h2>
+                        <p>Step-by-step guide to applying for international protection in Ireland. Understand the stages, required documents, interviews, decisions and appeals. Learn about your rights and responsibilities throughout the process.</p>
+                    </a>
+                    
+                    <!-- Category 3 -->
+                    <a href="ipp-category-living.html" class="portal-category-card">
+                         <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shamrock -->
+  <path d="M32 28C32 28 24 20 24 14C24 10 27 7 32 7C37 7 40 10 40 14C40 20 32 28 32 28Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 28C32 28 20 24 14 24C10 24 7 27 7 32C7 37 10 40 14 40C20 40 28 32 28 32" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 28C32 28 44 24 50 24C54 24 57 27 57 32C57 37 54 40 50 40C44 40 36 32 36 32" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="32" y1="28" x2="32" y2="48" stroke="#234c5e" stroke-width="3" stroke-linecap="round"/>
+  <!-- Small hearts for community/life -->
+  <path d="M16 48C16 48 14 46 14 44.5C14 43.5 14.5 43 15 43C15.5 43 16 43.5 16 44.5C16 43.5 16.5 43 17 43C17.5 43 18 43.5 18 44.5C18 46 16 48 16 48Z" fill="#234c5e"/>
+  <path d="M48 48C48 48 46 46 46 44.5C46 43.5 46.5 43 47 43C47.5 43 48 43.5 48 44.5C48 43.5 48.5 43 49 43C49.5 43 50 43.5 50 44.5C50 46 48 48 48 48Z" fill="#234c5e"/>
+</svg>
+                        <h2>Life in Ireland</h2>
+                        <p>Essential information for building your life in Ireland. Access guidance on healthcare, education, employment rights, housing, social services and Irish culture. Connect with support services and community resources.</p>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Bottom Divider -->
+            <div class="section-divider"></div>
+        </div>
+    </main>
+    
+    <!-- Footer (Same as CI) -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <!-- Categories -->
+                <div class="footer-categories">
+                    <div class="footer-section">
+                        <h3>Find information on...</h3>
+                        <ul>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Social Welfare</a></li>
+                            <li><a href="#">Employment</a></li>
+                            <li><a href="#">Money and Tax</a></li>
+                            <li><a href="#">Moving Country</a></li>
+                            <li><a href="#">Returning to Ireland</a></li>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Education and Training</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>&nbsp;</h3>
+                        <ul>
+                            <li><a href="#">Travel and Recreation</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">Consumer</a></li>
+                            <li><a href="#">Government in Ireland</a></li>
+                            <li><a href="#">Death and Bereavement</a></li>
+                            <li><a href="#">Family and Relationships</a></li>
+                            <li><a href="#">Justice</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- About -->
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Citizens Information</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Privacy statement</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="tel:0818074000">Phone CIPS 0818 07 4000</a> | 
+                    <a href="#">Visit your local CIC</a> | 
+                    <a href="#">View our publications</a>
+                </div>
+                
+                <div class="social-links">
+                    <!-- Social icons would go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    
+    <style>
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg) !important;
+}
+.mobile-menu-toggle.active span:nth-child(2) {
+    display: none !important;
+}
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg) !important;
+}
+</style>
+</body>
+</html>

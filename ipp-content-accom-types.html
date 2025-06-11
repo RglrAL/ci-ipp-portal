@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation types - Beginning in Ireland</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ipp-page ipp-content">
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header (Same as Category Page) -->
+    <header class="site-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="language-switcher">
+                    <strong>English</strong> | 
+                    <a href="#" lang="ga">Gaeilge</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="wrapper">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="ipp-index.html" title="Home">
+                            <img src="images/cio_logo.jpg" alt="Citizens Information logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="main-nav" role="navigation">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">What's New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">My Situation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Find a Centre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Volunteering</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.facebook.com/citizensinformation/" class="nav-link" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel -->
+        <nav class="mobile-nav" role="navigation">
+            <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">My Situation</a></li>
+                <li><a href="#">Find a Centre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section (Small strip like category pages) -->
+    <section class="hero ipp-hero ipp-hero-strip">
+        <!-- Just the background image, no content -->
+    </section>
+    
+    <!-- Portal Navigation Bar (Same as category page) -->
+    <nav class="portal-nav">
+        <div class="wrapper">
+            <div class="portal-nav-content">
+                <!-- Portal Logo/Title - LEFT SIDE -->
+                <div class="portal-branding">
+    <a href="ipp-homepage.html" class="portal-branding-link">
+        <img src="images/ipp-logo.png" alt="Beginning in Ireland" class="portal-logo">
+        <span class="portal-title">Beginning in Ireland</span>
+    </a>
+</div>
+                
+                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+                <div class="portal-nav-right">
+                    <!-- Desktop Links (hidden on mobile) -->
+                    <ul class="portal-links">
+                        <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+                    </ul>
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <select id="language-select" aria-label="Select language">
+                            <option value="en">English</option>
+                            <!-- Top 5 most used languages -->
+                            <option value="ar">العربية (Arabic)</option>
+                            <option value="ka">ქართული (Georgian)</option>
+                            <option value="so">Soomaali (Somali)</option>
+                            <option value="fr">Français (French)</option>
+                            <option value="ur">اردو (Urdu)</option>
+                            <!-- Visual separator -->
+                            <option disabled aria-label="separator between common and other languages">──── Other Languages ────</option>
+                            <!-- Remaining languages alphabetically -->
+                            <option value="zh">中文 (Chinese)</option>
+                            <option value="fa">دری (Dari)</option>
+                            <option value="ps">پښتو (Pashto)</option>
+                            <option value="pl">Polski (Polish)</option>
+                            <option value="ro">Română (Romanian)</option>
+                            <option value="sn">chiShona (Shona)</option>
+                            <option value="es">Español (Spanish)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Portal Mobile Menu Toggle -->
+                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Portal Mobile Navigation Panel -->
+    <nav class="portal-mobile-nav" role="navigation">
+        <ul>
+            <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+        </ul>
+        <div class="portal-mobile-language">
+            <label for="mobile-language-select">Language:</label>
+            <select id="mobile-language-select" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="ka">ქართული (Georgian)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="so">Soomaali (Somali)</option>
+                <option value="sn">chiShona (Shona)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="ps">پښتو (Pashto)</option>
+                <option value="fa">دری (Dari)</option>
+                <option value="fr">Français (French)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="pl">Polski (Polish)</option>
+                <option value="ro">Română (Romanian)</option>
+                <option value="zh">中文 (Chinese)</option>
+            </select>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="wrapper">
+            <!-- Breadcrumb and Search Row (Same as category page) -->
+            <div class="breadcrumb-search-row">
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <a href="ipp-homepage.html">Beginning in Ireland</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <a href="ipp-category-accommodation.html">Living in an accommodation centre</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span aria-current="page">Accommodation types</span>
+                </nav>
+                
+                <!-- Search Form -->
+                <form class="search-form content-search" action="#" method="get">
+                    <input type="search" 
+                           class="search-input" 
+                           name="q" 
+                           placeholder="Search Beginning in Ireland..."
+                           aria-label="Search">
+                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                </form>
+            </div>
+            
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="content-title">Accommodation types</h1>
+            </div>
+            
+            <!-- Two Column Layout -->
+            <div class="content-layout">
+                <!-- Main Content Column -->
+                <div class="content-main">
+                    <!-- Content Navigation -->
+                    <nav class="content-nav">
+                        <ul>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#direct-provision">Direct Provision centres</a></li>
+                            <li><a href="#emergency">Emergency accommodation</a></li>
+                            <li><a href="#own-door">Own door accommodation</a></li>
+                            <li><a href="#your-rights">Your rights and standards</a></li>
+                            <li><a href="#transfers">Transfers and moves</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Introduction Section -->
+                    <section id="introduction">
+                        <h2>Introduction</h2>
+                        <p>When you apply for international protection in Ireland, you will be offered accommodation while your application is being processed. There are different types of accommodation available, and the type you're offered depends on availability and your family situation.</p>
+                        
+                        <!-- Placeholder Video -->
+                        <div class="content-video">
+                            <div class="video-wrapper">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/B4XDELPtbRk?si=jKdtrPRRfsiVa04P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="media-caption">Video: Overview of accommodation options for international protection applicants</p>
+                        </div>
+                        
+                        <p>All accommodation provided is temporary while your protection application is being assessed. This page explains the different types of accommodation and what you can expect in each.</p>
+                        
+                        <p>The International Protection Accommodation Services (IPAS) manages accommodation for people seeking international protection. They work to ensure all residents have safe, suitable accommodation that meets their needs.</p>
+                    </section>
+                    
+                    <!-- Direct Provision Section -->
+                    <section id="direct-provision">
+                        <h2>Direct Provision centres</h2>
+                        <p>Direct Provision centres are the most common type of accommodation for protection applicants. These centres provide:</p>
+                        
+                        <ul>
+                            <li>A bedroom (single or shared)</li>
+                            <li>Three meals a day</li>
+                            <li>Basic toiletries and household items</li>
+                            <li>Access to laundry facilities</li>
+                            <li>Common areas for socialising</li>
+                        </ul>
+                        
+                        <!-- Placeholder Image Gallery -->
+                        <div class="content-image-gallery">
+                            <h3>Typical Direct Provision facilities</h3>
+                            <div class="image-grid">
+                                <figure class="content-image">
+                                    <img src="https://via.placeholder.com/400x300/e8f4f8/0A7EA4?text=Bedroom+Example" alt="Example of a bedroom in Direct Provision">
+                                    <figcaption>A typical bedroom in a Direct Provision centre</figcaption>
+                                </figure>
+                                <figure class="content-image">
+                                    <img src="https://via.placeholder.com/400x300/e8f4f8/0A7EA4?text=Common+Area" alt="Common area in Direct Provision">
+                                    <figcaption>Shared common areas for residents</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        
+                        <p>Centres vary in size and facilities. Some are purpose-built, while others are converted hotels or guesthouses. All centres must meet minimum standards set by the government.</p>
+                        
+                        <p>In Direct Provision, you receive a weekly allowance called the Daily Expenses Allowance. This is currently €38.80 per adult and €29.80 per child per week.</p>
+                        
+                        <!-- Placeholder Infographic -->
+                        <div class="content-infographic">
+                            <img src="https://via.placeholder.com/800x400/f2f2f2/0A7EA4?text=Weekly+Allowance+Infographic" alt="Weekly allowance breakdown infographic">
+                            <p class="media-caption">Weekly allowance rates for Direct Provision residents</p>
+                        </div>
+                    </section>
+                    
+                    <!-- Emergency Accommodation Section -->
+                    <section id="emergency">
+                        <h2>Emergency accommodation</h2>
+                        <p>Due to high demand, some people are initially placed in emergency accommodation. This might be in:</p>
+                        
+                        <ul>
+                            <li>Hotels or B&Bs</li>
+                            <li>Emergency reception centres</li>
+                            <li>Temporary facilities</li>
+                        </ul>
+                        
+                        <!-- Placeholder Alert Box with Image -->
+                        <div class="content-alert-box">
+                            <img src="https://via.placeholder.com/100x100/FFBF47/000000?text=!" alt="Important information icon" class="alert-icon">
+                            <div class="alert-content">
+                                <h3>Important: Temporary nature of emergency accommodation</h3>
+                                <p>Emergency accommodation is a very short-term solution. You should expect to be moved to more permanent accommodation within a few weeks.</p>
+                            </div>
+                        </div>
+                        
+                        <p>Emergency accommodation is meant to be very short-term while more suitable accommodation is found. Facilities may be more limited than in established centres.</p>
+                        
+                        <p>If you're in emergency accommodation, you should be moved to more permanent accommodation as soon as possible. Keep in regular contact with IPAS about your situation.</p>
+                    </section>
+                    
+                    <!-- Own Door Accommodation Section -->
+                    <section id="own-door">
+                        <h2>Own door accommodation</h2>
+                        <p>Own door accommodation means having your own self-contained unit, such as:</p>
+                        
+                        <ul>
+                            <li>An apartment</li>
+                            <li>A house</li>
+                            <li>Self-catering unit within a centre</li>
+                        </ul>
+                        
+                        <!-- Placeholder Comparison Table Image -->
+                        <div class="content-table-image">
+                            <img src="https://via.placeholder.com/800x500/ffffff/0A7EA4?text=Accommodation+Comparison+Table" alt="Comparison table of accommodation types">
+                            <p class="media-caption">Comparison of Direct Provision vs Own Door accommodation</p>
+                        </div>
+                        
+                        <p>In own door accommodation, you:</p>
+                        <ul>
+                            <li>Cook your own meals</li>
+                            <li>Manage your own household</li>
+                            <li>Receive a higher weekly allowance</li>
+                            <li>Have more privacy and independence</li>
+                        </ul>
+                        
+                        <!-- Placeholder Interactive Map -->
+                        <div class="content-map">
+                            <img src="https://via.placeholder.com/800x450/e8e8e8/0A7EA4?text=Map+of+Own+Door+Locations" alt="Map showing own door accommodation locations across Ireland">
+                            <p class="media-caption">Interactive map: Own door accommodation locations (click to explore)</p>
+                        </div>
+                        
+                        <p>Not everyone can access own door accommodation immediately. Priority is usually given to families with children and people with specific needs.</p>
+                    </section>
+                    
+                    <!-- Your Rights Section -->
+                    <section id="your-rights">
+                        <h2>Your rights and standards</h2>
+                        <p>Regardless of your accommodation type, you have the right to:</p>
+                        
+                        <ul>
+                            <li>Safe, clean accommodation</li>
+                            <li>Privacy and dignity</li>
+                            <li>Access to healthcare and education</li>
+                            <li>Practice your religion</li>
+                            <li>Make complaints if standards aren't met</li>
+                        </ul>
+                        
+                        <!-- Placeholder Rights Infographic -->
+                        <div class="content-infographic">
+                            <img src="https://via.placeholder.com/800x600/72A300/ffffff?text=Your+Rights+Infographic" alt="Visual guide to your accommodation rights">
+                            <p class="media-caption">Your rights in accommodation - visual guide</p>
+                        </div>
+                        
+                        <p>The National Standards for accommodation centres set out what you should expect. These cover areas like living space, food quality, facilities, and staff conduct.</p>
+                        
+                        <!-- Placeholder PDF Download -->
+                        <div class="content-download">
+                            <img src="https://via.placeholder.com/60x60/0A7EA4/ffffff?text=PDF" alt="PDF icon" class="download-icon">
+                            <div class="download-info">
+                                <h4><a href="#">Download: National Standards for Accommodation Centres (PDF)</a></h4>
+                                <p>Complete guide to accommodation standards (2.3 MB)</p>
+                            </div>
+                        </div>
+                        
+                        <p>If you have concerns about your accommodation, you can:</p>
+                        <ul>
+                            <li>Speak to the centre manager</li>
+                            <li>Contact IPAS directly</li>
+                            <li>Make a formal complaint</li>
+                            <li>Contact support organisations for help</li>
+                        </ul>
+                    </section>
+                    
+                    <!-- Transfers Section -->
+                    <section id="transfers">
+                        <h2>Transfers and moves</h2>
+                        <p>You might need to move accommodation for various reasons:</p>
+                        
+                        <ul>
+                            <li>Centre closures or renovations</li>
+                            <li>Family reunification</li>
+                            <li>Medical or educational needs</li>
+                            <li>Safety concerns</li>
+                        </ul>
+                        
+                        <p>IPAS manages all transfers. You can request a transfer, but approval depends on availability and your circumstances. Emergency transfers may be arranged in cases of serious concern.</p>
+                        
+                        <!-- Placeholder Process Flowchart -->
+                        <div class="content-flowchart">
+                            <img src="https://via.placeholder.com/800x400/f7f7f7/0A7EA4?text=Transfer+Process+Flowchart" alt="Flowchart showing the transfer request process">
+                            <p class="media-caption">How the transfer process works - step by step</p>
+                        </div>
+                        
+                        <p>If you're being transferred:</p>
+                        <ul>
+                            <li>You'll receive advance notice (except in emergencies)</li>
+                            <li>Transport will be arranged if needed</li>
+                            <li>Your children's education should be considered</li>
+                            <li>Medical needs will be taken into account</li>
+                        </ul>
+                        
+                        <!-- Placeholder Audio Player -->
+                        <div class="content-audio">
+                            <h4>Listen: Transfer process explained in multiple languages</h4>
+                            <audio controls style="width: 100%;">
+                                <source src="placeholder-audio.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p class="media-caption">Available in: Arabic, French, Georgian, Somali, Urdu</p>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <aside class="content-sidebar">
+                    <!-- Related Documents Module -->
+                    <div class="sidebar-module related-documents">
+                        <h3>Find out more</h3>
+                        <ul class="related-list">
+                            <li>
+                                <a href="#">Daily living essentials</a>
+                                <p>Information about meals, laundry, allowances and daily life in accommodation centres.</p>
+                            </li>
+                            <li>
+                                <a href="#">Rights and responsibilities</a>
+                                <p>Your rights as a resident, house rules, and how to make complaints about accommodation.</p>
+                            </li>
+                            <li>
+                                <a href="#">Moving to own accommodation</a>
+                                <p>Information about leaving Direct Provision and finding your own accommodation.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                   
+                </aside>
+            </div>
+            
+            <!-- Bottom Divider -->
+            <div class="section-divider"></div>
+        </div>
+    </main>
+    
+    <!-- Footer (Same as Homepage) -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <!-- Categories -->
+                <div class="footer-categories">
+                    <div class="footer-section">
+                        <h3>Find information on...</h3>
+                        <ul>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Social Welfare</a></li>
+                            <li><a href="#">Employment</a></li>
+                            <li><a href="#">Money and Tax</a></li>
+                            <li><a href="#">Moving Country</a></li>
+                            <li><a href="#">Returning to Ireland</a></li>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Education and Training</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>&nbsp;</h3>
+                        <ul>
+                            <li><a href="#">Travel and Recreation</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">Consumer</a></li>
+                            <li><a href="#">Government in Ireland</a></li>
+                            <li><a href="#">Death and Bereavement</a></li>
+                            <li><a href="#">Family and Relationships</a></li>
+                            <li><a href="#">Justice</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- About -->
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Citizens Information</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Privacy statement</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="tel:0818074000">Phone CIPS 0818 07 4000</a> | 
+                    <a href="#">Visit your local CIC</a> | 
+                    <a href="#">View our publications</a>
+                </div>
+                
+                <div class="social-links">
+                    <!-- Social icons would go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

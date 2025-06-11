@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living in an accommodation centre - Beginning in Ireland</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ipp-page ipp-category">
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header (Same as Homepage) -->
+    <header class="site-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="language-switcher">
+                    <strong>English</strong> | 
+                    <a href="#" lang="ga">Gaeilge</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="wrapper">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="ipp-index.html" title="Home">
+                            <img src="images/cio_logo.jpg" alt="Citizens Information logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="main-nav" role="navigation">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">What's New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">My Situation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Find a Centre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Volunteering</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.facebook.com/citizensinformation/" class="nav-link" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel -->
+        <nav class="mobile-nav" role="navigation">
+            <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">My Situation</a></li>
+                <li><a href="#">Find a Centre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section (Smaller strip for category pages) -->
+    <section class="hero ipp-hero ipp-hero-strip">
+        <!-- Just the background image, no content -->
+    </section>
+    
+    <!-- Portal Navigation Bar (Same as homepage) -->
+    <nav class="portal-nav">
+        <div class="wrapper">
+            <div class="portal-nav-content">
+                <!-- Portal Logo/Title - LEFT SIDE -->
+               <div class="portal-branding">
+    <a href="ipp-homepage.html" class="portal-branding-link">
+        <img src="images/ipp-logo.png" alt="Beginning in Ireland" class="portal-logo">
+        <span class="portal-title">Beginning in Ireland</span>
+    </a>
+</div>
+                
+                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+                <div class="portal-nav-right">
+                    <!-- Desktop Links (hidden on mobile) -->
+                    <ul class="portal-links">
+                        <li><a href="ipp-about.html">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+                    </ul>
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <select id="language-select" aria-label="Select language">
+                            <option value="en">English</option>
+                            <!-- Top 5 most used languages -->
+                            <option value="ar">العربية (Arabic)</option>
+                            <option value="ka">ქართული (Georgian)</option>
+                            <option value="so">Soomaali (Somali)</option>
+                            <option value="fr">Français (French)</option>
+                            <option value="ur">اردو (Urdu)</option>
+                            <!-- Visual separator -->
+                            <option disabled aria-label="separator between common and other languages">──── Other Languages ────</option>
+                            <!-- Remaining languages alphabetically -->
+                            <option value="zh">中文 (Chinese)</option>
+                            <option value="fa">دری (Dari)</option>
+                            <option value="ps">پښتو (Pashto)</option>
+                            <option value="pl">Polski (Polish)</option>
+                            <option value="ro">Română (Romanian)</option>
+                            <option value="sn">chiShona (Shona)</option>
+                            <option value="es">Español (Spanish)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Portal Mobile Menu Toggle -->
+                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Portal Mobile Navigation Panel -->
+    <nav class="portal-mobile-nav" role="navigation">
+        <ul>
+            <li><a href="#">About</a></li>
+                        <li><a href="ipp-videos-page.html">Videos</a></li>
+                        <li><a href="ipp-glossary.html">Glossary</a></li>
+        </ul>
+        <div class="portal-mobile-language">
+            <label for="mobile-language-select">Language:</label>
+            <select id="mobile-language-select" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="ka">ქართული (Georgian)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="so">Soomaali (Somali)</option>
+                <option value="sn">chiShona (Shona)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="ps">پښتو (Pashto)</option>
+                <option value="fa">دری (Dari)</option>
+                <option value="fr">Français (French)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="pl">Polski (Polish)</option>
+                <option value="ro">Română (Romanian)</option>
+                <option value="zh">中文 (Chinese)</option>
+            </select>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="wrapper">
+            <!-- Breadcrumb and Search Row -->
+            <div class="breadcrumb-search-row">
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <a href="ipp-homepage.html">Beginning in Ireland</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span aria-current="page">Living in an accommodation centre</span>
+                </nav>
+                
+                <!-- Search Form -->
+                <form class="search-form category-search" action="#" method="get">
+                    <input type="search" 
+                           class="search-input" 
+                           name="q" 
+                           placeholder="Search Beginning in Ireland..."
+                           aria-label="Search">
+                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                </form>
+            </div>
+            
+            <!-- Category Intro Module (Similar to homepage intro) -->
+            <section class="category-intro-module">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <div class="category-title-with-icon">
+                            <!-- Using the same icon from the homepage category card -->
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-icon">
+                                <path d="M32 8L8 28V56H24V40C24 37.7909 25.7909 36 28 36H36C38.2091 36 40 37.7909 40 40V56H56V28L32 8Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 32L32 8L60 32" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="20" y="20" width="8" height="8" stroke="#234c5e" stroke-width="2"/>
+                                <rect x="36" y="20" width="8" height="8" stroke="#234c5e" stroke-width="2"/>
+                            </svg>
+                            <h1>Living in an accommodation centre</h1>
+                        </div>
+                        <p>Finding a place to live is crucial for your well-being as you await a decision on your application for international protection. Whether you're in Direct Provision, Emergency Accommodation, or other housing arrangements, this section provides essential information about your rights, daily life, and available support services.</p>
+                        <p>Learn about meals, healthcare access, education opportunities, and how to connect with your local community while living in accommodation centres across Ireland.</p>
+                    </div>
+                    <div class="intro-media">
+                        <div class="video-wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DdnOnokLsJI?si=F58f7ISM7O6WNHuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <!-- TODO: Replace with actual category-specific video URL -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Subcategory Cards Grid -->
+            <section class="subcategory-section">
+                <div class="subcategory-grid">
+                    <!-- Subcategory 1 -->
+                    <a href="ipp-content-accom-types.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Building/accommodation icon -->
+                            <rect x="12" y="20" width="18" height="36" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="34" y="28" width="18" height="28" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="18" y1="28" x2="24" y2="28" stroke="#234c5e" stroke-width="2"/>
+                            <line x1="18" y1="36" x2="24" y2="36" stroke="#234c5e" stroke-width="2"/>
+                            <line x1="18" y1="44" x2="24" y2="44" stroke="#234c5e" stroke-width="2"/>
+                            <line x1="40" y1="36" x2="46" y2="36" stroke="#234c5e" stroke-width="2"/>
+                            <line x1="40" y1="44" x2="46" y2="44" stroke="#234c5e" stroke-width="2"/>
+                        </svg>
+                        <h2>Accommodation types</h2>
+                        <p>Understand the different types of accommodation available including Direct Provision centres, emergency accommodation, and own-door accommodation options.</p>
+                    </a>
+                    
+                    <!-- Subcategory 2 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Daily living/calendar icon -->
+                            <rect x="12" y="16" width="40" height="40" rx="4" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="12" y1="28" x2="52" y2="28" stroke="#234c5e" stroke-width="3"/>
+                            <line x1="22" y1="10" x2="22" y2="22" stroke="#234c5e" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="42" y1="10" x2="42" y2="22" stroke="#234c5e" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="32" cy="40" r="3" fill="#234c5e"/>
+                            <circle cx="22" cy="40" r="3" fill="#234c5e"/>
+                            <circle cx="42" cy="40" r="3" fill="#234c5e"/>
+                        </svg>
+                        <h2>Daily living essentials</h2>
+                        <p>Information about meals, laundry facilities, communal areas, visiting hours, and the daily allowance you receive while in accommodation.</p>
+                    </a>
+                    
+                    <!-- Subcategory 3 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Healthcare/medical cross icon -->
+                            <circle cx="32" cy="32" r="24" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="28" y="20" width="8" height="24" fill="#234c5e"/>
+                            <rect x="20" y="28" width="24" height="8" fill="#234c5e"/>
+                        </svg>
+                        <h2>Healthcare access</h2>
+                        <p>How to register with a GP, access medical cards, emergency healthcare, mental health support, and specialist services while in accommodation.</p>
+                    </a>
+                    
+                    <!-- Subcategory 4 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Education/book icon -->
+                            <path d="M12 20L32 10L52 20V44L32 54L12 44V20Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M32 10V54" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 20L32 30L52 20" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>Education and children</h2>
+                        <p>Enrolling children in schools, accessing early childhood care, school transport, uniforms, books, and additional educational support services.</p>
+                    </a>
+                    
+                    <!-- Subcategory 5 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Rights/scales of justice icon -->
+                            <path d="M32 12V52" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 12H44" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 24L20 12L28 24" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M36 24L44 12L52 24" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 24C12 28 16 32 20 32C24 32 28 28 28 24" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M36 24C36 28 40 32 44 32C48 32 52 28 52 24" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>Rights and responsibilities</h2>
+                        <p>Your rights as a resident, house rules, complaints procedures, transfers between centres, and how to report issues or concerns.</p>
+                    </a>
+                    
+                    <!-- Subcategory 6 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Community/people icon -->
+                            <circle cx="32" cy="20" r="6" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 40C20 34 25 30 32 30C39 30 44 34 44 40V52H20V40Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="18" cy="24" r="4" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 40C8 36 11 33 16 33" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="46" cy="24" r="4" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M56 40C56 36 53 33 48 33" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>Community integration</h2>
+                        <p>Connecting with local communities, accessing sports and recreation, religious services, cultural activities, and volunteer opportunities.</p>
+                    </a>
+                    
+                    <!-- Subcategory 7 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Support/helping hands icon -->
+                            <path d="M32 52C42 52 50 44 50 34V24H40V34C40 36 38 38 36 38H28C26 38 24 36 24 34V24H14V34C14 44 22 52 32 52Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 24V16C24 13 26 10 29 10C32 10 34 13 34 16" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M40 24V16C40 13 38 10 35 10" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="32" cy="34" r="3" fill="#234c5e"/>
+                        </svg>
+                        <h2>Support services</h2>
+                        <p>Access to social workers, interpreters, legal aid, advocacy services, and specialised support for vulnerable individuals and families.</p>
+                    </a>
+                    
+                    <!-- Subcategory 8 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Moving/house with arrow icon -->
+                            <path d="M28 8L8 24V52H20V36C20 34 22 32 24 32H32C34 32 36 34 36 36V52H48V24L28 8Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 28L28 8L52 28" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M44 40L56 40M56 40L52 36M56 40L52 44" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>Moving to own accommodation</h2>
+                        <p>Information about transitioning out of Direct Provision, finding private rental accommodation, and understanding your housing options.</p>
+                    </a>
+                    
+                    <!-- Subcategory 9 -->
+                    <a href="#" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Emergency/warning icon -->
+                            <path d="M32 12L56 52H8L32 12Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="32" y1="28" x2="32" y2="38" stroke="#234c5e" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="32" cy="44" r="2" fill="#234c5e"/>
+                        </svg>
+                        <h2>Emergency situations</h2>
+                        <p>What to do in emergencies, accessing crisis support, reporting safety concerns, and understanding evacuation procedures in your centre.</p>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Bottom Divider -->
+            <div class="section-divider"></div>
+        </div>
+    </main>
+    
+    <!-- Footer (Same as Homepage) -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <!-- Categories -->
+                <div class="footer-categories">
+                    <div class="footer-section">
+                        <h3>Find information on...</h3>
+                        <ul>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Social Welfare</a></li>
+                            <li><a href="#">Employment</a></li>
+                            <li><a href="#">Money and Tax</a></li>
+                            <li><a href="#">Moving Country</a></li>
+                            <li><a href="#">Returning to Ireland</a></li>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Education and Training</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>&nbsp;</h3>
+                        <ul>
+                            <li><a href="#">Travel and Recreation</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">Consumer</a></li>
+                            <li><a href="#">Government in Ireland</a></li>
+                            <li><a href="#">Death and Bereavement</a></li>
+                            <li><a href="#">Family and Relationships</a></li>
+                            <li><a href="#">Justice</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- About -->
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Citizens Information</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Privacy statement</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="tel:0818074000">Phone CIPS 0818 07 4000</a> | 
+                    <a href="#">Visit your local CIC</a> | 
+                    <a href="#">View our publications</a>
+                </div>
+                
+                <div class="social-links">
+                    <!-- Social icons would go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
