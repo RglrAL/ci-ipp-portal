@@ -5262,22 +5262,18 @@ body.ipp-about {
 }
 
 .language-selector .language-icon {
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
     object-fit: contain;
     vertical-align: middle;
 }
 
-/* Optional: Add opacity hover effect since we can't change stroke color on images */
-.language-selector:hover .language-icon {
-    opacity: 0.7;
-    transition: opacity 0.2s ease;
+/* Only apply hover to the select element */
+.language-selector select:hover {
+    border-color: var(--primary-blue);
+    cursor: pointer;
 }
 
-/* Or use a filter to tint it green on hover */
-.language-selector:hover .language-icon {
-    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(427%) hue-rotate(42deg) brightness(95%) contrast(98%);
-    transition: filter 0.2s ease;
-}
+
 
