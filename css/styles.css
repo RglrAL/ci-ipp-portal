@@ -5269,11 +5269,7 @@ body.ipp-about {
     vertical-align: middle;
 }
 
-/* Only apply hover to the select element */
-.language-selector select:hover {
-    border-color: var(--primary-blue);
-    cursor: pointer;
-}
+
 
 
 
