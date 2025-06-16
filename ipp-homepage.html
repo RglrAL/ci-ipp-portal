@@ -119,8 +119,19 @@
                         <li><a href="ipp-glossary.html">Glossary</a></li>
                     </ul>
                     
-                    <!-- Language Selector (hidden on mobile) -->
-                    <div class="language-selector">
+               <!-- Language Selector (hidden on mobile) -->
+<div class="language-selector">
+    <svg class="language-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer circle -->
+        <circle cx="10" cy="10" r="8" stroke="#234c5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Vertical line -->
+        <path d="M10 2L10 18" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+        <!-- Horizontal line -->
+        <path d="M2 10L18 10" stroke="#234c5e" stroke-width="2" stroke-linecap="round"/>
+        <!-- Curved latitude lines -->
+        <path d="M4 6C6 5 8 4.5 10 4.5C12 4.5 14 5 16 6" stroke="#234c5e" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M4 14C6 15 8 15.5 10 15.5C12 15.5 14 15 16 14" stroke="#234c5e" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
     <select id="language-select" aria-label="Select language">
         <option value="en">English</option>
         <!-- Top 5 most used languages -->
@@ -131,7 +142,7 @@
         <option value="ur">اردو (Urdu)</option>
         <!-- Visual separator -->
         <option disabled aria-label="separator between common and other languages">
- 		──── Other Languages ────</option>
+        ──── Other Languages ────</option>
         <!-- Remaining languages alphabetically -->
         <option value="zh">中文 (Chinese)</option>
         <option value="fa">دری (Dari)</option>
