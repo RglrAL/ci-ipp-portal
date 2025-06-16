@@ -5262,8 +5262,8 @@ body.ipp-about {
 }
 
 .language-selector .language-icon {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     flex-shrink: 0;
     object-fit: contain;
     vertical-align: middle;
