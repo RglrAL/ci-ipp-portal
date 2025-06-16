@@ -5254,29 +5254,30 @@ body.ipp-about {
 }
 
 
-/* Language icon styling */
+/* Language icon image styling */
 .language-selector {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.language-icon {
+.language-selector .language-icon {
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
-    display: inline-block;
+    object-fit: contain;
     vertical-align: middle;
 }
 
-/* Hover effect */
-.language-selector:hover .language-icon path,
-.language-selector:hover .language-icon circle {
-    stroke: #72A300;
-    transition: stroke 0.2s ease;
+/* Optional: Add opacity hover effect since we can't change stroke color on images */
+.language-selector:hover .language-icon {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
 }
 
-/* Focus effect when select is focused */
-.language-selector:focus-within .language-icon path,
-.language-selector:focus-within .language-icon circle {
-    stroke: #72A300;
+/* Or use a filter to tint it green on hover */
+.language-selector:hover .language-icon {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(427%) hue-rotate(42deg) brightness(95%) contrast(98%);
+    transition: filter 0.2s ease;
 }
 
