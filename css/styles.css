@@ -1875,11 +1875,7 @@ body.portal-menu-open {
     transition: border-color 0.2s ease;
 }
 
-.language-selector select:hover,
-.language-selector select:focus {
-    border-color: var(--primary-blue);
-    outline: none;
-}
+
 
 /* 32. Intro Text/Video Module
     ========================= */
