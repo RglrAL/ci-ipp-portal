@@ -5274,3 +5274,9 @@ body.ipp-about {
     transition: stroke 0.2s ease;
 }
 
+/* Focus effect when select is focused */
+.language-selector:focus-within .language-icon path,
+.language-selector:focus-within .language-icon circle {
+    stroke: #72A300;
+}
+
