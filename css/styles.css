@@ -1871,7 +1871,7 @@ body.portal-menu-open {
     border-radius: 4px;
     background: #fff;
     cursor: pointer;
-    min-width: 150px;
+    min-width: 130px;
     transition: border-color 0.2s ease;
 }
 
