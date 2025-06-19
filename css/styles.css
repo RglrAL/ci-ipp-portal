@@ -1971,7 +1971,7 @@ intro-media {
 }
 
 .portal-category-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
 }
 
@@ -5368,7 +5368,7 @@ body.ipp-about {
 /* Portal Category Cards - Main homepage cards */
 .portal-category-card:hover,
 .portal-category-card:focus {
-    transform: translateY(-3px); /* Reduced from -8px */
+    transform: translateY(-2px); /* Reduced from -8px */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Lighter shadow */
     border: 2px solid #C27E00;
     outline: 2px solid #C27E00;
@@ -5402,7 +5402,7 @@ body.ipp-about {
     border-color: #C27E00;
     background: rgba(194, 126, 0, 0.03);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     outline: 2px solid #C27E00;
     outline-offset: 2px;
     transition: all 0.3s ease;
@@ -5428,7 +5428,7 @@ body.ipp-about {
 /* Video Cards */
 .video-card:hover,
 .video-card:focus {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
     border-color: #C27E00;
     outline: 2px solid #C27E00;
@@ -5664,7 +5664,7 @@ body.ipp-about {
 @media (max-width: 768px) {
     .portal-category-card:hover,
     .portal-category-card:focus {
-        transform: translateY(-3px); /* Reduced movement */
+        transform: translateY(-2px); /* Reduced movement */
     }
     
     .subcategory-card:hover,
