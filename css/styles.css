@@ -5368,7 +5368,7 @@ body.ipp-about {
 /* Portal Category Cards - Main homepage cards */
 .portal-category-card:hover,
 .portal-category-card:focus {
-    transform: translateY(-5px); /* Reduced from -8px */
+    transform: translateY(-3px); /* Reduced from -8px */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Lighter shadow */
     border: 2px solid #C27E00;
     outline: 2px solid #C27E00;
