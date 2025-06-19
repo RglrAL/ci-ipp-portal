@@ -5267,5 +5267,358 @@ body.ipp-about {
 
 
 
+/* ===================================
+   ENHANCED HOVER EFFECTS FOR IPP PORTAL
+   Add these styles to your existing styles.css
+   =================================== */
+
+/* 1. NAVIGATION HOVER EFFECTS
+   ============================ */
+
+/* Main Navigation Links (Blue Header) */
+.nav-link:hover,
+.nav-link:focus {
+    background: var(--dark-blue);
+    color: #fff;
+    outline: 3px solid #FFC861; /* Yellow outline for accessibility */
+    outline-offset: -3px;
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+/* Portal Navigation Links (Grey Bar) */
+.portal-links a:hover,
+.portal-links a:focus {
+    background: rgba(194, 126, 0, 0.1); /* Light orange background */
+    color: #C27E00; /* Orange text */
+    outline: 2px solid #C27E00;
+    outline-offset: 2px;
+    border-radius: 4px;
+    transform: translateY(-1px);
+}
+
+/* 2. BUTTON HOVER EFFECTS
+   ======================= */
+
+/* Search Button Hover */
+.search-button:hover,
+.search-button:focus {
+    background: #5a8200; /* Darker green */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: 3px solid #FFFFFF; /* White outline on green */
+    outline-offset: 2px;
+}
+
+/* Load More Button Hover */
+.load-more-btn:hover,
+.load-more-btn:focus {
+    background: #5a8200;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(114, 163, 0, 0.3);
+    outline: 3px solid #FFFFFF;
+    outline-offset: 3px;
+}
+
+/* 3. CATEGORY CARDS HOVER EFFECTS
+   =============================== */
+
+/* Portal Category Cards */
+.portal-category-card:hover,
+.portal-category-card:focus {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border: 2px solid #C27E00; /* Orange border */
+    outline: 3px solid #C27E00;
+    outline-offset: 3px;
+    background: #fffef8; /* Very light orange tint */
+}
+
+.portal-category-card:hover .category-icon svg path,
+.portal-category-card:hover .category-icon svg rect,
+.portal-category-card:hover .category-icon svg circle,
+.portal-category-card:hover .category-icon svg line,
+.portal-category-card:focus .category-icon svg path,
+.portal-category-card:focus .category-icon svg rect,
+.portal-category-card:focus .category-icon svg circle,
+.portal-category-card:focus .category-icon svg line {
+    stroke: #C27E00; /* Orange icon on hover */
+    stroke-width: 3.5;
+}
+
+.portal-category-card:hover h2,
+.portal-category-card:focus h2 {
+    color: #C27E00; /* Orange title on hover */
+    text-decoration: underline;
+}
+
+/* 4. FORM ELEMENTS HOVER EFFECTS
+   ============================== */
+
+/* Search Input Hover */
+.search-input:hover,
+.search-input:focus {
+    border-color: #C27E00;
+    box-shadow: 0 0 0 3px rgba(194, 126, 0, 0.2);
+    outline: 2px solid #C27E00;
+    outline-offset: 1px;
+}
+
+/* Language Selector Hover */
+.language-selector select:hover,
+.language-selector select:focus {
+    border-color: #C27E00;
+    box-shadow: 0 0 0 3px rgba(194, 126, 0, 0.2);
+    outline: 2px solid #C27E00;
+    outline-offset: 2px;
+    background-color: #fffef8;
+}
+
+/* 5. MOBILE MENU TOGGLES HOVER
+   ============================ */
+
+/* Main Mobile Menu Toggle (Blue Header) */
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
+    background: rgba(255, 200, 97, 0.2); /* Light yellow background */
+    border-radius: 4px;
+    outline: 3px solid #FFC861;
+    outline-offset: 2px;
+    transform: scale(1.05);
+}
+
+.mobile-menu-toggle:hover span,
+.mobile-menu-toggle:focus span {
+    background-color: #FFC861; /* Yellow hamburger lines */
+    box-shadow: 0 0 4px rgba(255, 200, 97, 0.5);
+}
+
+/* Portal Mobile Menu Toggle (Grey Bar) */
+.portal-menu-toggle:hover,
+.portal-menu-toggle:focus {
+    background: rgba(194, 126, 0, 0.1);
+    border-radius: 4px;
+    outline: 3px solid #C27E00;
+    outline-offset: 2px;
+    transform: scale(1.05);
+}
+
+.portal-menu-toggle:hover span,
+.portal-menu-toggle:focus span {
+    background-color: #C27E00; /* Orange hamburger lines */
+    box-shadow: 0 0 4px rgba(194, 126, 0, 0.5);
+}
+
+/* 6. LINK HOVER EFFECTS
+   ===================== */
+
+/* General Links on White Background */
+.intro-text a:hover,
+.intro-text a:focus,
+.content-main a:hover,
+.content-main a:focus {
+    color: #C27E00;
+    text-decoration: none;
+    background: rgba(194, 126, 0, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+    outline: 2px solid #C27E00;
+    outline-offset: 2px;
+}
+
+/* Footer Links */
+.footer-section a:hover,
+.footer-section a:focus {
+    color: #FFC861; /* Yellow on dark background */
+    text-decoration: none;
+    background: rgba(255, 200, 97, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+    outline: 2px solid #FFC861;
+    outline-offset: 2px;
+}
+
+/* 7. VIDEO AND MEDIA HOVER EFFECTS
+   ================================ */
+
+/* Video Wrapper Hover */
+.video-wrapper:hover,
+.video-wrapper:focus-within {
+    outline: 3px solid #C27E00;
+    outline-offset: 3px;
+    border-radius: 4px;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Play Button Enhancement */
+.video-card:hover .play-button svg circle,
+.video-card:focus .play-button svg circle {
+    fill: rgba(194, 126, 0, 0.9); /* Orange play button */
+    stroke: #C27E00;
+    stroke-width: 2;
+}
+
+/* 8. BREADCRUMB HOVER EFFECTS
+   =========================== */
+
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+    color: #C27E00;
+    text-decoration: none;
+    background: rgba(194, 126, 0, 0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+    outline: 2px solid #C27E00;
+    outline-offset: 1px;
+}
+
+/* 9. FILTER BUTTONS HOVER (for Videos page)
+   ========================================== */
+
+.filter-btn:hover,
+.filter-btn:focus {
+    background: #C27E00;
+    color: #fff;
+    border-color: #C27E00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(194, 126, 0, 0.3);
+    outline: 3px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+.filter-btn.active:hover,
+.filter-btn.active:focus {
+    background: #5a8200;
+    border-color: #5a8200;
+    outline: 3px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+/* 10. ALPHABET NAVIGATION HOVER (for Glossary)
+    ============================================= */
+
+.alphabet-link:hover,
+.alphabet-link:focus {
+    background: #C27E00;
+    color: #fff;
+    border-color: #C27E00;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(194, 126, 0, 0.3);
+    outline: 3px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+.alphabet-link.active:hover,
+.alphabet-link.active:focus {
+    background: #5a8200;
+    border-color: #5a8200;
+    outline: 3px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+/* 11. BACK TO TOP HOVER
+    ===================== */
+
+.back-to-top:hover,
+.back-to-top:focus {
+    background: #C27E00;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(194, 126, 0, 0.3);
+    outline: 3px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+/* 12. PORTAL BRANDING HOVER
+    ========================= */
+
+.portal-branding-link:hover,
+.portal-branding-link:focus {
+    opacity: 0.8;
+    transform: translateY(-1px);
+    outline: 3px solid #C27E00;
+    outline-offset: 3px;
+    border-radius: 4px;
+    background: rgba(194, 126, 0, 0.05);
+    padding: 8px;
+    margin: -8px;
+}
+
+/* 13. RESPONSIVE HOVER ADJUSTMENTS
+    ================================ */
+
+/* Reduce transforms on mobile for better performance */
+@media (max-width: 768px) {
+    .portal-category-card:hover,
+    .portal-category-card:focus {
+        transform: translateY(-4px); /* Reduced movement */
+    }
+    
+    .video-wrapper:hover,
+    .video-wrapper:focus-within {
+        transform: scale(1.01); /* Reduced scale */
+    }
+    
+    /* Simplify mobile menu hover for touch devices */
+    .mobile-menu-toggle:hover,
+    .portal-menu-toggle:hover {
+        transform: none; /* Remove scale on mobile */
+    }
+}
+
+/* 14. HIGH CONTRAST MODE ADJUSTMENTS
+    ================================== */
+
+@media (prefers-contrast: high) {
+    .portal-category-card:hover,
+    .portal-category-card:focus {
+        border-width: 3px;
+        outline-width: 4px;
+    }
+    
+    .nav-link:hover,
+    .nav-link:focus {
+        outline-width: 4px;
+    }
+}
+
+/* 15. REDUCED MOTION SUPPORT
+    ========================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .portal-category-card:hover,
+    .portal-category-card:focus,
+    .video-wrapper:hover,
+    .video-wrapper:focus-within,
+    .search-button:hover,
+    .search-button:focus,
+    .nav-link:hover,
+    .nav-link:focus {
+        transform: none; /* Remove all transforms */
+        transition: none; /* Remove transitions */
+    }
+}
+
+/* 16. FOCUS VISIBLE (for keyboard navigation)
+    =========================================== */
+
+/* Enhanced focus for keyboard users */
+.portal-category-card:focus-visible,
+.nav-link:focus-visible,
+.search-button:focus-visible,
+.portal-links a:focus-visible {
+    outline-width: 4px;
+    outline-style: solid;
+    outline-offset: 3px;
+}
+
+/* Remove focus outline for mouse users */
+.portal-category-card:focus:not(:focus-visible),
+.nav-link:focus:not(:focus-visible),
+.search-button:focus:not(:focus-visible),
+.portal-links a:focus:not(:focus-visible) {
+    outline: none;
+}
 
 
