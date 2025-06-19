@@ -1971,8 +1971,8 @@ intro-media {
 }
 
 .portal-category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
 }
 
 .portal-category-card:hover h2 {
