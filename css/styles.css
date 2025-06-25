@@ -925,7 +925,7 @@ body.portal-menu-open {
     display: block;
     width: 24px;
     height: 2px;
-    background: #72A300;
+    background-color: white !important;
     margin: 3px 0;
     transition: all 0.3s ease;
     position: relative;
