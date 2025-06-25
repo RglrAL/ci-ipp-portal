@@ -770,7 +770,7 @@ a:focus {
 
 /* 3. Portal Navigation Bar (Grey bar with logo) */
 .portal-nav {
-    background: #e8e8e8;
+    background: #008340;
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -1829,9 +1829,11 @@ body.portal-menu-open {
 }
 
 .portal-title {
-    font-size: 34px;
+    color: white !important;
+    font-size: 24px;
     font-weight: 600;
-    color: #000000; /* White text for darker background */
+    margin: 0;
+    white-space: nowrap;
 }
 
 .portal-nav-right {
@@ -1841,6 +1843,7 @@ body.portal-menu-open {
 }
 
 .portal-links {
+   
     display: flex;
     list-style: none;
     gap: 20px;
@@ -1849,7 +1852,7 @@ body.portal-menu-open {
 }
 
 .portal-links a {
-    color: #fff; /* White text for darker background */
+    color: white !important;
     text-decoration: none;
     font-size: 16px;
     padding: 8px 12px;
@@ -1858,6 +1861,7 @@ body.portal-menu-open {
 }
 
 .portal-links a:hover {
+   color: white !important;
     text-decoration: underline;
     background: rgba(255, 255, 255, 0.1);
 }
