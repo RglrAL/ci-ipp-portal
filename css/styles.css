@@ -5772,7 +5772,7 @@ body.ipp-about {
 /* Portal Logo - Responsive sizing */
 .portal-logo {
     display: block;
-    height: 50px; /* Desktop size */
+    height: 45px; /* Desktop size */
     width: auto;
     max-width: 100%;
     object-fit: contain;
