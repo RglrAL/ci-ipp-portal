@@ -5769,41 +5769,30 @@ body.ipp-about {
 }
 
 
-/* Portal Branding - Responsive Logo Styles */
-.portal-logo-desktop {
+/* Portal Logo - Responsive sizing */
+.portal-logo {
     display: block;
-    height: 50px; /* Adjust as needed */
+    height: 50px; /* Desktop size */
     width: auto;
     max-width: 100%;
+    object-fit: contain;
 }
 
-.portal-logo-mobile {
-    display: none;
-    height: 60px; /* Adjust as needed */
-    width: auto;
-    max-width: 100%;
-}
-
+/* Hide the old title text */
 .portal-title {
     display: none;
 }
 
+/* Mobile - Smaller logo */
 @media (max-width: 768px) {
-    .portal-logo-desktop {
-        display: none;
+    .portal-logo {
+        height: 35px; /* Smaller on mobile */
     }
-    
-    .portal-logo-mobile {
-        display: block;
-    }
-    
-    .portal-nav-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .portal-branding {
-        text-align: center;
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .portal-logo {
+        height: 30px; /* Even smaller */
     }
 }
