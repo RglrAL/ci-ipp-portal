@@ -770,7 +770,7 @@ a:focus {
 
 /* 3. Portal Navigation Bar (Grey bar with logo) */
 .portal-nav {
-    background: #024d27;
+    background: 522d8a;
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -1803,7 +1803,7 @@ body.portal-menu-open {
 /* 30. Portal Navigation Bar
     ======================= */
 .portal-nav {
-    background: #024d27;  /* Grey background */
+    background: 522d8a;  /* Grey background */
     padding: 15px 0;
     position: sticky;  /* This makes the grey bar sticky */
     top: 0;
@@ -2206,7 +2206,7 @@ intro-media {
 /* SECTION 3: Portal Navigation - Always Visible */
 .portal-nav {
     display: block;
-    background: #024d27;
+    background: 522d8a;
     padding: 15px 0;
     position: sticky;  /* CHANGE THIS */
     top: 0;  /* ADD THIS */
