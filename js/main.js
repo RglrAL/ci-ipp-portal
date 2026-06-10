@@ -986,15 +986,46 @@ function initPortalMenu() {
         }, 300);
     }
 
+    // Visible, focusable elements currently inside the panel (collapsed
+    // sub-lists are hidden, so their links are excluded automatically).
+    function focusables() {
+        return Array.prototype.filter.call(
+            panel.querySelectorAll('a[href], button:not([disabled])'),
+            function(el) { return el.offsetParent !== null; }
+        );
+    }
+
     toggle.addEventListener('click', function() {
         if (panel.classList.contains('open')) closeMenu(); else openMenu();
     });
     overlay.addEventListener('click', closeMenu);
     if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && panel.classList.contains('open')) {
+        if (!panel.classList.contains('open')) return;
+
+        if (e.key === 'Escape') {
             closeMenu();
             toggle.focus();
+            return;
+        }
+
+        // Trap focus inside the panel while it is open
+        if (e.key === 'Tab') {
+            const items = focusables();
+            if (!items.length) return;
+            const first = items[0];
+            const last = items[items.length - 1];
+            if (!panel.contains(document.activeElement)) {
+                e.preventDefault();
+                first.focus();
+            } else if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
         }
     });
 }
