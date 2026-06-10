@@ -1,0 +1,67 @@
+{# ============================================================
+   Portal navigation: top level template (bar + slide in panel).
+   Renders the menu from the Wagtail page tree. No hard coded data.
+
+   Expects in context:
+     portal_root : the portal landing Page (parent of the sections)
+     max_levels  : how deep to go (use 3 today)
+
+   The bar items (logo, About link, language selector) are project
+   specific, so keep or replace them to match citizensinformation.ie.
+   Keep the class names: the prototype CSS and JS depend on them.
+   ============================================================ #}
+
+<nav class="portal-nav" aria-label="Portal">
+  <div class="wrapper">
+    <div class="portal-nav-content">
+
+      {# One hamburger, controls the panel below #}
+      <button class="portal-menu-toggle" aria-label="Open menu"
+              aria-expanded="false" aria-controls="portal-menu-panel">
+        <span></span><span></span><span></span>
+      </button>
+
+      {# Logo / branding #}
+      <div class="portal-branding">
+        <a href="{{ portal_root.url }}" class="portal-branding-link">
+          <img src="{% raw %}{{ logo_url }}{% endraw %}" alt="" class="portal-logo">
+          <span class="portal-title">{{ portal_root.title }}</span>
+        </a>
+      </div>
+
+      {# About stays as a standalone button on desktop #}
+      <div class="portal-nav-right">
+        <a href="{% raw %}{{ about_page.url }}{% endraw %}" class="portal-about-link">About</a>
+      </div>
+
+      {# Language selector (drops to its own row on mobile via CSS) #}
+      <div class="language-selector">
+        {# ... your existing language widget ... #}
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+{# Slide in panel #}
+<div class="portal-menu-overlay" hidden></div>
+<nav id="portal-menu-panel" class="portal-menu-panel" aria-label="Site menu">
+  <div class="portal-menu-panel-header">
+    <span>Menu</span>
+    <button class="portal-menu-close" aria-label="Close menu">&times;</button>
+  </div>
+
+  <ul class="portal-menu-list">
+
+    {# About at the top of the menu (shown at all sizes) #}
+    <li class="portal-menu-leaf portal-menu-extra level-1">
+      <a class="portal-menu-sublink" href="{% raw %}{{ about_page.url }}{% endraw %}">About</a>
+    </li>
+
+    {# The sections and everything under them, straight from the page tree #}
+    {% for page in portal_root.get_children.live.in_menu %}
+      {% include "portal/menu_node.html" with page=page level=1 max_levels=max_levels %}
+    {% endfor %}
+
+  </ul>
+</nav>

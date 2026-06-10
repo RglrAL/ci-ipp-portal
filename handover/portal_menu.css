@@ -1,0 +1,210 @@
+/* ============================================================
+   Portal navigation styles (self contained).
+   Pairs with portal_menu.html, menu_node.html and portal_menu.js.
+   A clean, consolidated copy of the navigation rules from the
+   prototype. Brand green is #008340.
+   ============================================================ */
+
+/* Container. If your site already has a wrapper, use that instead. */
+.portal-nav .wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* ---- Bar ---- */
+.portal-nav {
+  background: #008340;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+.portal-nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+/* Hamburger (far right on desktop) */
+.portal-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  order: 99;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+}
+.portal-menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.portal-menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.portal-menu-toggle.active span:nth-child(2) { opacity: 0; }
+.portal-menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+/* Branding */
+.portal-branding { display: flex; align-items: center; gap: 15px; }
+.portal-branding-link { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+.portal-logo { height: 40px; width: auto; }
+.portal-title { color: #fff; font-size: 24px; font-weight: 600; margin: 0; white-space: nowrap; }
+
+/* About + language switcher on the right */
+.portal-nav-right { margin-left: auto; display: flex; align-items: center; gap: 16px; }
+.portal-about-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.portal-about-link:hover,
+.portal-about-link:focus { background: rgba(255,255,255,.15); text-decoration: underline; }
+.portal-nav .language-selector { display: flex; align-items: center; gap: 6px; }
+.portal-nav .language-selector select {
+  padding: 8px 6px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* ---- Overlay + slide in panel ---- */
+.portal-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.portal-menu-overlay.open { opacity: 1; }
+.portal-menu-overlay[hidden] { display: none; }
+
+.portal-menu-panel {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 380px;
+  max-width: 88vw;
+  background: #fff;
+  z-index: 1001;
+  box-shadow: 2px 0 18px rgba(0,0,0,.28);
+  transform: translateX(-100%);
+  /* Hidden from tab order + assistive tech when closed; flips after the
+     slide out so the close still animates. */
+  visibility: hidden;
+  transition: transform .3s ease, visibility 0s linear .3s;
+  overflow-y: auto;
+}
+.portal-menu-panel.open {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform .3s ease, visibility 0s;
+}
+.portal-menu-panel-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #008340;
+  color: #fff;
+  padding: 16px 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.portal-menu-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+/* ---- Accordion list ---- */
+.portal-menu-list { list-style: none; margin: 0; padding: 6px 0; }
+.portal-menu-group { border-bottom: 1px solid #eee; }
+.portal-menu-row { display: flex; align-items: stretch; }
+.portal-menu-cat {
+  flex: 1 1 auto;
+  display: block;
+  padding: 16px 18px;
+  color: #008340;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.3;
+}
+.portal-menu-cat:hover,
+.portal-menu-cat:focus { background: #f2f7f4; }
+
+.portal-menu-expand {
+  flex: 0 0 54px;
+  background: none;
+  border: none;
+  border-left: 1px solid #eee;
+  cursor: pointer;
+  position: relative;
+}
+.portal-menu-expand:hover { background: #f2f7f4; }
+/* plus icon that becomes a minus when its own group is open */
+.portal-menu-expand span,
+.portal-menu-expand span::before { content: ""; position: absolute; background: #008340; border-radius: 2px; }
+.portal-menu-expand span { width: 14px; height: 2px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.portal-menu-expand span::before { width: 2px; height: 14px; left: 6px; top: -6px; transition: opacity .2s ease; }
+.portal-menu-group.open > .portal-menu-row .portal-menu-expand span::before { opacity: 0; }
+
+.portal-menu-sub { list-style: none; margin: 0; padding: 0; overflow: hidden; }
+.portal-menu-sub[hidden] { display: none; }
+
+/* Level 2 (categories): indented, a step down from sections */
+.portal-menu-group.level-1 > .portal-menu-sub { background: #f5f8f6; }
+.portal-menu-group.level-2 { border-bottom: 1px solid #e6efe8; }
+.portal-menu-group.level-2 > .portal-menu-row .portal-menu-cat { padding-left: 30px; font-size: 15px; color: #2c6b8a; }
+
+/* Level 3 (individual pages) */
+.portal-menu-group.level-2 > .portal-menu-sub { background: #fbfdfc; }
+.portal-menu-leaf .portal-menu-sublink {
+  display: block;
+  padding: 11px 18px 11px 42px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.3;
+  text-decoration: none;
+}
+.portal-menu-leaf .portal-menu-sublink:hover,
+.portal-menu-leaf .portal-menu-sublink:focus { background: #e7f0ea; color: #008340; }
+
+/* "About" at the top of the menu (shown at all sizes) */
+.portal-menu-extra { display: block; border-bottom: 2px solid #e3ece6; }
+.portal-menu-extra .portal-menu-sublink { padding: 16px 18px; font-size: 17px; font-weight: 600; color: #234c5e; }
+
+/* ---- Mobile (768px and below) ---- */
+@media (max-width: 768px) {
+  .portal-nav-content { flex-wrap: wrap; }
+  .portal-menu-toggle { order: 2; }          /* stays on the top row, right side */
+  .portal-nav-right { display: none; }        /* About moves into the menu */
+  .portal-branding { flex: 1 1 auto; min-width: 0; }
+  .portal-logo { height: 52px; }
+  .portal-title { font-size: 17px; line-height: 1.25; white-space: normal; min-width: 0; }
+  .portal-nav .language-selector { order: 10; flex-basis: 100%; margin-top: 12px; }
+  .portal-nav .language-selector select { width: 100%; max-width: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portal-menu-panel,
+  .portal-menu-overlay,
+  .portal-menu-toggle span { transition: none; }
+}

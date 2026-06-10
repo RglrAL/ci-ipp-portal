@@ -1,0 +1,37 @@
+{# ============================================================
+   Portal navigation: one menu node, recursive.
+   A page with children (and below the depth limit) becomes an
+   expandable group; otherwise it becomes a plain link.
+
+   Expects: page, level, max_levels
+   ============================================================ #}
+
+{% with children=page.get_children.live.in_menu %}
+  {% if children and level < max_levels %}
+
+    <li class="portal-menu-group level-{{ level }}">
+      <div class="portal-menu-row">
+        <a class="portal-menu-cat" href="{{ page.url }}">{{ page.title }}</a>
+        <button class="portal-menu-expand"
+                aria-expanded="false"
+                aria-controls="portal-sub-{{ page.id }}"
+                aria-label="Show {{ page.title }}">
+          <span></span>
+        </button>
+      </div>
+
+      <ul id="portal-sub-{{ page.id }}" class="portal-menu-sub" hidden>
+        {% for child in children %}
+          {% include "portal/menu_node.html" with page=child level=level|add:1 max_levels=max_levels %}
+        {% endfor %}
+      </ul>
+    </li>
+
+  {% else %}
+
+    <li class="portal-menu-leaf level-{{ level }}">
+      <a class="portal-menu-sublink" href="{{ page.url }}">{{ page.title }}</a>
+    </li>
+
+  {% endif %}
+{% endwith %}
