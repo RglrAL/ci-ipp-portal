@@ -1,19 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your International Protection Guide</title>
+    <title>Next steps after a successful decision - Your International Protection Guide</title>
     
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="ipp-page">
+<body class="ipp-page ipp-content">
     <!-- Skip to main content link -->
     <a href="#main-content" class="sr-only">Skip to main content</a>
     
-    <!-- Header (Same as CI) -->
+    <!-- Header (Same as Category Page) -->
     <header class="site-header">
         <!-- Top Bar -->
         <div class="header-top">
@@ -60,17 +59,17 @@
                         </ul>
                     </nav>
                     
-                    <!-- SINGLE Mobile Menu Toggle - NO CONTAINER -->
-                   <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
         
-        <!-- Mobile Navigation Panel (Hidden by default, shown when hamburger clicked) -->
+        <!-- Mobile Navigation Panel -->
         <nav class="mobile-nav" role="navigation">
             <ul>
                 <li><a href="#">Categories</a></li>
@@ -81,24 +80,12 @@
         </nav>
     </header>
     
-    <!-- Hero Section -->
-    <section class="hero ipp-hero">
-        <div class="hero-content">
-            <!-- Search Box - Top Right (SAME AS CI) -->
-            <div class="hero-search">
-                <form class="search-form" action="#" method="get">
-                    <input type="search" 
-                           class="search-input" 
-                           name="q" 
-                           placeholder="Search citizensinformation.ie..."
-                           aria-label="Search">
-                    <button type="submit" class="search-button" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-                </form>
-            </div>
-        </div>
+    <!-- Hero Section (Small strip like category pages) -->
+    <section class="hero ipp-hero ipp-hero-strip">
+        <!-- Just the background image, no content -->
     </section>
     
-    <!-- Portal Navigation Bar (Below Hero) - STAYS VISIBLE ON MOBILE -->
+    <!-- Portal Navigation Bar (Same as category page) -->
     <nav class="portal-nav">
         <div class="wrapper">
             <div class="portal-nav-content">
@@ -160,68 +147,80 @@
     <!-- Main Content -->
     <main id="main-content">
         <div class="wrapper">
-            <!-- Intro Text/Video Module -->
-            <section class="intro-module">
-                <div class="intro-content">
-                    <div class="intro-text">
-                        <h1>Your International Protection Guide</h1>
-                        <p>This portal provides essential information for people seeking international protection in Ireland. Find clear, practical guidance about the application process, living in accommodation centres, and building your life in Ireland.</p>
-                        <p>All information is available in multiple languages and designed to help you navigate your journey with confidence. Whether you're just arriving or have been here for some time, we're here to support you with accurate, up-to-date information about your rights and entitlements. we're here to support you with accurate, up-to-date information about your rights and entitlements.
-                        </p>
-                    </div>
-                    <div class="intro-media">
-                        <img src="images/hero_images/Two_male_and_female_outdoors.original%20Home%20page.png" alt="" loading="lazy">
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Category Cards -->
-            <section class="portal-categories">
-                <div class="category-cards">
-                    <a href="ipp-section-international-protection.html" class="portal-category-card">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-icon">
-                                <path d="M12 8H40L52 20V56H12V8Z" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M40 8V20H52" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                <line x1="20" y1="32" x2="44" y2="32" stroke="#008340" stroke-width="2" stroke-linecap="round"/>
-                                <line x1="20" y1="40" x2="44" y2="40" stroke="#008340" stroke-width="2" stroke-linecap="round"/>
-                                <line x1="20" y1="48" x2="36" y2="48" stroke="#008340" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="32" cy="20" r="4" stroke="#008340" stroke-width="2" fill="none"/>
-                                <path d="M24 28C24 24 27 22 32 22C37 22 40 24 40 28" stroke="#008340" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        <h2>International protection in Ireland</h2>
-                        <p>Everything you need to understand and navigate the international protection process in Ireland — from making your application, to what happens after a decision, and where to get help along the way.</p>
-                    </a>
+            <div class="breadcrumb-search-row">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+<a href="ipp-homepage.html">Your International Protection Guide</a>
+                    <span class="breadcrumb-separator">›</span>
+<a href="ipp-section-international-protection.html">International protection in Ireland</a>
+                    <span class="breadcrumb-separator">›</span>
+<a href="ipp-category-after-your-decision.html">After your decision</a>
+                    <span class="breadcrumb-separator">›</span>
+<span aria-current="page">Next steps after a successful decision</span>
+                </nav>
 
-                    <a href="ipp-section-accommodation.html" class="portal-category-card">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M32 8L8 28V56H24V40C24 37.7909 25.7909 36 28 36H36C38.2091 36 40 37.7909 40 40V56H56V28L32 8Z" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M4 32L32 8L60 32" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="20" y="20" width="8" height="8" stroke="#008340" stroke-width="2"/>
-  <rect x="36" y="20" width="8" height="8" stroke="#008340" stroke-width="2"/>
-</svg>
-                        <h2>Living in an accommodation centre</h2>
-                        <p>Practical information about daily life in an accommodation centre — the supports available to you, what to expect day to day, and the documents you will need.</p>
-                    </a>
+                <form class="search-form content-search" action="#" method="get">
+                    <input type="search" class="search-input" name="q" placeholder="Search citizensinformation.ie..." aria-label="Search">
+                    <button type="submit" class="search-button" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                </form>
+            </div>
 
-                    <a href="ipp-section-life-in-ireland.html" class="portal-category-card">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M32 28C32 28 24 20 24 14C24 10 27 7 32 7C37 7 40 10 40 14C40 20 32 28 32 28Z" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M32 28C32 28 20 24 14 24C10 24 7 27 7 32C7 37 10 40 14 40C20 40 28 32 28 32" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M32 28C32 28 44 24 50 24C54 24 57 27 57 32C57 37 54 40 50 40C44 40 36 32 36 32" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="32" y1="28" x2="32" y2="48" stroke="#008340" stroke-width="3" stroke-linecap="round"/>
-</svg>
-                        <h2>Life in Ireland</h2>
-                        <p>Guidance for building your life in Ireland — covering health, education, work, money, safety, family, community and what comes after the protection process.</p>
-                    </a>
+            <div class="page-header">
+                <h1 class="content-title">Next steps after a successful decision</h1>
+            </div>
+
+            <div class="content-layout">
+                <div class="content-main">
+                    <nav class="content-nav">
+                        <ul>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#what-you-need-to-know">What you need to know</a></li>
+                            <li><a href="#getting-help">Getting help</a></li>
+                        </ul>
+                    </nav>
+
+                    <section id="overview">
+                        <h2>Overview</h2>
+                        <p>This is an example content page in the new portal structure, showing how an individual page under <strong>After your decision</strong> would look. The full guidance on “Next steps after a successful decision” would appear here.</p>
+                        <p><em>[Placeholder content for the local mock-up.]</em></p>
+                    </section>
+
+                    <section id="what-you-need-to-know">
+                        <h2>What you need to know</h2>
+                        <ul>
+                            <li>Key point about this topic</li>
+                            <li>Another important detail</li>
+                            <li>What to do next</li>
+                        </ul>
+                    </section>
+
+                    <section id="getting-help">
+                        <h2>Getting help</h2>
+                        <p>If you need help, contact the Citizens Information Phone Service on <a href="tel:0818074000">0818 07 4000</a>, Monday to Friday, 9am to 8pm.</p>
+                    </section>
                 </div>
-            </section>
-            
-            <!-- Bottom Divider -->
+
+                <aside class="content-sidebar">
+                    <div class="sidebar-module related-documents">
+                        <h3>Find out more</h3>
+                        <ul class="related-list">
+                            <li>
+                                <a href="#">Voluntary return</a>
+                            </li>
+                            <li>
+                                <a href="#">Appealing a decision from the IPO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
             <div class="section-divider"></div>
         </div>
     </main>
     
-    <!-- Footer (Same as CI) -->
+    <!-- Footer (Same as Homepage) -->
     <footer class="site-footer">
         <div class="wrapper">
             <div class="footer-content">
@@ -285,18 +284,5 @@
     
     <!-- JavaScript -->
     <script src="js/main.js"></script>
-    
-    
-    <style>
-.mobile-menu-toggle.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg) !important;
-}
-.mobile-menu-toggle.active span:nth-child(2) {
-    display: none !important;
-}
-.mobile-menu-toggle.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg) !important;
-}
-</style>
 </body>
 </html>

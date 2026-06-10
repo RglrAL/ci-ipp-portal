@@ -30,7 +30,7 @@
                 <div class="header-content">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="ipp-index.html" title="Home">
+                        <a href="index.html" title="Home">
                             <img src="images/cio_logo.jpg" alt="Citizens Information logo">
                         </a>
                     </div>
@@ -89,81 +89,61 @@
     <nav class="portal-nav">
         <div class="wrapper">
             <div class="portal-nav-content">
-                <!-- Portal Logo/Title - LEFT SIDE -->
+                <!-- Single hamburger: opens the full sitemap menu -->
+                <button class="portal-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="portal-menu-panel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Logo / branding (top left) -->
                 <div class="portal-branding">
-                    <a href="ipp-index.html" class="portal-branding-link">
+                    <a href="ipp-homepage.html" class="portal-branding-link">
                         <img src="images/ipp-logo.png" alt="Your International Protection Guide" class="portal-logo">
                         <span class="portal-title">Your International Protection Guide</span>
                     </a>
                 </div>
-                
-                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+
+                <!-- About (visible at all breakpoints) -->
                 <div class="portal-nav-right">
-                    <!-- Desktop Links (hidden on mobile) -->
-                    <ul class="portal-links">
-                        <li><a href="ipp-about.html" class="active">About</a></li>
-                        <li><a href="ipp-videos-page.html">Videos</a></li>
-                        <li><a href="ipp-glossary.html">Glossary</a></li>
-                    </ul>
-                    
-                    <!-- Language Selector -->
-                    <div class="language-selector">
-                        <select id="language-select" aria-label="Select language">
-                            <option value="en">English</option>
-                            <option value="ar">العربية (Arabic)</option>
-                            <option value="ka">ქართული (Georgian)</option>
-                            <option value="so">Soomaali (Somali)</option>
-                            <option value="fr">Français (French)</option>
-                            <option value="ur">اردو (Urdu)</option>
-                            <option disabled>──── Other Languages ────</option>
-                            <option value="zh">中文 (Chinese)</option>
-                            <option value="fa">دری (Dari)</option>
-                            <option value="ps">پښتو (Pashto)</option>
-                            <option value="pl">Polski (Polish)</option>
-                            <option value="ro">Română (Romanian)</option>
-                            <option value="sn">chiShona (Shona)</option>
-                            <option value="es">Español (Spanish)</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Portal Mobile Menu Toggle -->
-                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                    <a href="ipp-about.html" class="portal-about-link">About</a>
+                </div>
+
+                <!-- Language switcher: sits on the right on desktop,
+                     drops to its own row below the bar on mobile -->
+                <div class="language-selector">
+                    <img src="images/earth-internationalization-language-switching-64.png" alt="" class="language-icon">
+                    <select id="language-select" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="ar">العربية (Arabic)</option>
+                        <option value="ka">ქართული (Georgian)</option>
+                        <option value="so">Soomaali (Somali)</option>
+                        <option value="fr">Français (French)</option>
+                        <option value="ur">اردو (Urdu)</option>
+                        <option disabled aria-label="separator between common and other languages">──── Other Languages ────</option>
+                        <option value="zh">中文 (Chinese)</option>
+                        <option value="fa">دری (Dari)</option>
+                        <option value="ps">پښتو (Pashto)</option>
+                        <option value="pl">Polski (Polish)</option>
+                        <option value="ro">Română (Romanian)</option>
+                        <option value="sn">chiShona (Shona)</option>
+                        <option value="es">Español (Spanish)</option>
+                    </select>
                 </div>
             </div>
         </div>
     </nav>
-    
-    <!-- Portal Mobile Navigation Panel -->
-    <nav class="portal-mobile-nav" role="navigation">
-        <ul>
-            <li><a href="ipp-about.html" class="active">About</a></li>
-            <li><a href="ipp-videos-page.html">Videos</a></li>
-            <li><a href="ipp-glossary.html">Glossary</a></li>
-        </ul>
-        <div class="portal-mobile-language">
-            <label for="mobile-language-select">Language:</label>
-            <select id="mobile-language-select" aria-label="Select language">
-                <option value="en">English</option>
-                <option value="ka">ქართული (Georgian)</option>
-                <option value="ar">العربية (Arabic)</option>
-                <option value="so">Soomaali (Somali)</option>
-                <option value="sn">chiShona (Shona)</option>
-                <option value="ur">اردو (Urdu)</option>
-                <option value="ps">پښتو (Pashto)</option>
-                <option value="fa">دری (Dari)</option>
-                <option value="fr">Français (French)</option>
-                <option value="es">Español (Spanish)</option>
-                <option value="pl">Polski (Polish)</option>
-                <option value="ro">Română (Romanian)</option>
-                <option value="zh">中文 (Chinese)</option>
-            </select>
+
+    <!-- Slide-in sitemap menu (list rendered by js/main.js) -->
+    <div class="portal-menu-overlay" hidden></div>
+    <nav id="portal-menu-panel" class="portal-menu-panel" aria-label="Site menu" aria-hidden="true">
+        <div class="portal-menu-panel-header">
+            <span>Menu</span>
+            <button class="portal-menu-close" aria-label="Close menu">&times;</button>
         </div>
+        <ul class="portal-menu-list" data-portal-menu></ul>
     </nav>
-    
+
     <!-- Main Content -->
     <main id="main-content">
         <div class="wrapper">
@@ -183,9 +163,9 @@
                     <input type="search" 
                            class="search-input" 
                            name="q" 
-                           placeholder="Search..."
+                           placeholder="Search citizensinformation.ie..."
                            aria-label="Search">
-                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                    <button type="submit" class="search-button" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
                 </form>
             </div>
             
@@ -292,7 +272,14 @@
                         </div>
                     </div>
                 </section>
-                
+
+                <!-- Glossary -->
+                <section class="glossary-section">
+                    <h2>Glossary of Terms</h2>
+                    <p>International protection comes with a lot of unfamiliar words and abbreviations. Our glossary explains the key terms in plain language.</p>
+                    <p><a href="ipp-glossary.html" class="glossary-link">Browse the glossary &rarr;</a></p>
+                </section>
+
                 <!-- Who We Are -->
                 <section class="who-section">
                     <h2>Who We Are</h2>
@@ -315,10 +302,10 @@
                         <div class="help-card">
                             <div class="help-icon">
                                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="10" y="10" width="40" height="40" rx="4" stroke="#234c5e" stroke-width="3"/>
-                                    <line x1="20" y1="20" x2="40" y2="20" stroke="#234c5e" stroke-width="2"/>
-                                    <line x1="20" y1="28" x2="40" y2="28" stroke="#234c5e" stroke-width="2"/>
-                                    <line x1="20" y1="36" x2="32" y2="36" stroke="#234c5e" stroke-width="2"/>
+                                    <rect x="10" y="10" width="40" height="40" rx="4" stroke="#008340" stroke-width="3"/>
+                                    <line x1="20" y1="20" x2="40" y2="20" stroke="#008340" stroke-width="2"/>
+                                    <line x1="20" y1="28" x2="40" y2="28" stroke="#008340" stroke-width="2"/>
+                                    <line x1="20" y1="36" x2="32" y2="36" stroke="#008340" stroke-width="2"/>
                                 </svg>
                             </div>
                             <h3>Information</h3>
@@ -328,9 +315,9 @@
                         <div class="help-card">
                             <div class="help-icon">
                                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="30" cy="30" r="20" stroke="#234c5e" stroke-width="3"/>
-                                    <path d="M30 20V32" stroke="#234c5e" stroke-width="3" stroke-linecap="round"/>
-                                    <circle cx="30" cy="40" r="2" fill="#234c5e"/>
+                                    <circle cx="30" cy="30" r="20" stroke="#008340" stroke-width="3"/>
+                                    <path d="M30 20V32" stroke="#008340" stroke-width="3" stroke-linecap="round"/>
+                                    <circle cx="30" cy="40" r="2" fill="#008340"/>
                                 </svg>
                             </div>
                             <h3>Support</h3>
@@ -340,8 +327,8 @@
                         <div class="help-card">
                             <div class="help-icon">
                                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M30 10L40 20V40C40 42 38 44 36 44H24C22 44 20 42 20 40V20L30 10Z" stroke="#234c5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <rect x="26" y="30" width="8" height="14" stroke="#234c5e" stroke-width="2"/>
+                                    <path d="M30 10L40 20V40C40 42 38 44 36 44H24C22 44 20 42 20 40V20L30 10Z" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="26" y="30" width="8" height="14" stroke="#008340" stroke-width="2"/>
                                 </svg>
                             </div>
                             <h3>Resources</h3>

@@ -770,7 +770,7 @@ a:focus {
 
 /* 3. Portal Navigation Bar (Grey bar with logo) */
 .portal-nav {
-    background: #522d8a;
+    background: #008340;
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -1803,7 +1803,7 @@ body.portal-menu-open {
 /* 30. Portal Navigation Bar
     ======================= */
 .portal-nav {
-    background: #522d8a;  /* Grey background */
+    background: #008340;  /* Grey background */
     padding: 15px 0;
     position: sticky;  /* This makes the grey bar sticky */
     top: 0;
@@ -2206,7 +2206,7 @@ intro-media {
 /* SECTION 3: Portal Navigation - Always Visible */
 .portal-nav {
     display: block;
-    background: #522d8a;
+    background: #008340;
     padding: 15px 0;
     position: sticky;  /* CHANGE THIS */
     top: 0;  /* ADD THIS */
@@ -2734,7 +2734,6 @@ body.portal-menu-open {
     ====================================================== */
 .category-intro-module {
     padding: 40px 0;
-    border-bottom: 1px solid #e0e0e0; /* Add border at bottom */
 }
 
 /* Use same intro-content styles from homepage */
@@ -5832,3 +5831,442 @@ body.ipp-about {
         display: none;
     }
 }
+
+/* ============================================================
+   34. YIPG Portal Menu - single hamburger + slide-in sitemap
+   2026 redesign. Appended last so it overrides earlier
+   .portal-* rules. Bar: [hamburger] [logo] ... [About] [lang]
+   ============================================================ */
+
+/* --- Bar layout --- */
+.portal-nav-content {
+    justify-content: flex-start;   /* hamburger + logo sit together on the left */
+    gap: 16px;
+}
+.portal-nav-right {
+    margin-left: auto;   /* push About + language to the right */
+    gap: 16px;
+}
+
+/* Hamburger is now visible at ALL breakpoints */
+.portal-menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: 99;            /* far right (after About + language) */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+}
+.portal-menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #fff !important;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: transform .3s ease, opacity .3s ease;
+}
+.portal-menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.portal-menu-toggle.active span:nth-child(2) { opacity: 0; }
+.portal-menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+/* About button */
+.portal-about-link {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+.portal-about-link:hover,
+.portal-about-link:focus { background: rgba(255, 255, 255, 0.15); text-decoration: underline; }
+
+/* Language selector stays visible at every breakpoint (incl. mobile) */
+.portal-nav .language-selector {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+}
+.portal-nav .language-icon { width: 24px; height: 24px; }
+.portal-nav .language-selector select {
+    min-width: 0;
+    padding: 8px 6px;
+    max-width: 180px;
+    accent-color: #008340;   /* open dropdown highlight = brand green */
+}
+/* Keep focus on-brand (override the old amber focus style) */
+.portal-nav .language-selector select:hover,
+.portal-nav .language-selector select:focus {
+    border-color: #008340;
+    outline: 2px solid #008340;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px rgba(0, 131, 64, 0.15);
+    background-color: #fff;
+}
+
+/* --- Slide-in panel + overlay --- */
+.portal-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.portal-menu-overlay.open { opacity: 1; }
+.portal-menu-overlay[hidden] { display: none; }
+
+.portal-menu-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 380px;
+    max-width: 88vw;
+    background: #fff;
+    z-index: 1001;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.28);
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.portal-menu-panel.open { transform: translateX(0); }
+
+.portal-menu-panel-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #008340;
+    color: #fff;
+    padding: 16px 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.portal-menu-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 6px;
+}
+.portal-menu-close:hover { opacity: .85; }
+
+/* --- Accordion list --- */
+.portal-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+}
+.portal-menu-group { border-bottom: 1px solid #eee; }
+.portal-menu-row { display: flex; align-items: stretch; }
+.portal-menu-cat {
+    flex: 1 1 auto;
+    display: block;
+    padding: 16px 18px;
+    color: #234c5e;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.3;
+}
+.portal-menu-cat:hover,
+.portal-menu-cat:focus { background: #f2f7f4; }
+
+.portal-menu-expand {
+    flex: 0 0 54px;
+    background: none;
+    border: none;
+    border-left: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+}
+.portal-menu-expand:hover { background: #f2f7f4; }
+/* plus icon that becomes a minus when expanded */
+.portal-menu-expand span,
+.portal-menu-expand span::before {
+    content: "";
+    position: absolute;
+    background: #008340;
+    border-radius: 2px;
+}
+.portal-menu-expand span {
+    width: 14px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.portal-menu-expand span::before {
+    width: 2px;
+    height: 14px;
+    left: 6px;
+    top: -6px;
+    transition: opacity .2s ease;
+}
+.portal-menu-group.open > .portal-menu-row .portal-menu-expand span::before { opacity: 0; }
+
+.portal-menu-sub {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: height .28s ease;
+}
+.portal-menu-sub[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) {
+    .portal-menu-sub { transition: none; }
+}
+
+/* Level 2 (categories): indented, a step down from sections */
+.portal-menu-group.level-1 > .portal-menu-sub { background: #f5f8f6; }
+.portal-menu-group.level-2 { border-bottom: 1px solid #e6efe8; }
+.portal-menu-group.level-2 > .portal-menu-row .portal-menu-cat {
+    padding-left: 30px;
+    font-size: 15px;
+    color: #2c6b8a;
+}
+
+/* Level 3 (individual pages) */
+.portal-menu-group.level-2 > .portal-menu-sub { background: #fbfdfc; }
+.portal-menu-leaf .portal-menu-sublink {
+    display: block;
+    padding: 11px 18px 11px 42px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.3;
+    text-decoration: none;
+}
+.portal-menu-leaf .portal-menu-sublink:hover,
+.portal-menu-leaf .portal-menu-sublink:focus { background: #e7f0ea; color: #008340; }
+
+/* "About" in the slide-in menu — shown at all times (top of the menu);
+   the standalone bar button also remains on desktop */
+.portal-menu-extra {
+    display: block;
+    border-bottom: 2px solid #e3ece6;
+}
+.portal-menu-extra .portal-menu-sublink {
+    padding: 16px 18px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #234c5e;
+}
+
+/* Hide any legacy portal nav remnants */
+.portal-links,
+.portal-mobile-nav { display: none !important; }
+
+/* On mobile, the bar wraps so the language switcher sits on its own
+   full-width row BELOW the navigation rather than crammed into it. */
+@media (max-width: 768px) {
+    .portal-nav-content { flex-wrap: wrap; }
+
+    /* Hamburger right-aligned on the top row; language wraps below it */
+    .portal-menu-toggle { order: 2; }
+
+    /* About moves into the hamburger menu on mobile */
+    .portal-nav-right { display: none; }
+    .portal-menu-extra {
+        display: block;
+        border-bottom: 2px solid #e3ece6;
+    }
+
+    /* Logo + title beside the hamburger — larger / more readable on mobile */
+    .portal-branding { flex: 1 1 auto; min-width: 0; }
+    .portal-branding-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+    }
+    .portal-logo { height: 52px; }
+    .portal-title {
+        font-size: 17px;
+        line-height: 1.25;
+        white-space: normal;   /* allow wrapping so it can be a readable size */
+        min-width: 0;
+    }
+
+    .portal-nav .language-selector {
+        order: 10;            /* always last -> drops to the new bottom row */
+        flex-basis: 100%;     /* full-width row below the bar */
+        margin-top: 12px;
+        justify-content: flex-start;
+    }
+    .portal-nav .language-selector select {
+        flex: 1 1 auto;
+        max-width: none;   /* fill the full-width row */
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   35. Portal content headings + card titles in brand green
+   (#008340, matching the sub-banner). Scoped to the portal
+   main content so footer/banner/menu-panel headings are safe.
+   ============================================================ */
+.ipp-page #main-content h1,
+.ipp-page #main-content h2,
+.ipp-page #main-content h3 {
+    color: #008340;
+}
+
+/* ============================================================
+   36. Hero image (right of intro module) + category page list
+   ============================================================ */
+/* Every hero is the same fixed height (title top-left, image fills the rest),
+   wrapped in a subtle bordered card with a soft drop shadow. */
+.category-intro-module .intro-content,
+.intro-module .intro-content {
+    align-items: stretch;
+    min-height: 360px;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e6ece9;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.035);
+}
+.category-intro-module .category-title-with-icon { margin-top: 0; }
+.intro-media {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 8px;
+    align-self: stretch;
+    min-height: 220px;
+}
+.intro-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .category-intro-module .intro-content,
+    .intro-module .intro-content { min-height: 0; padding: 18px; }
+    .intro-media { min-height: 200px; height: 200px; }
+}
+
+/* Category landing pages: line-by-line list of pages (replaces cards) */
+.page-list-section { padding: 0 0 50px; }
+.page-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 860px;
+}
+.page-list-item {
+    padding: 14px 4px;
+}
+.page-list-link {
+    font-size: 19px;
+    font-weight: 600;
+    color: #008340;
+    text-decoration: none;
+}
+.page-list-link:hover,
+.page-list-link:focus { text-decoration: underline; }
+.page-list-blurb {
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   37. Search bar: full width on mobile (override 500px cap)
+   ============================================================ */
+@media (max-width: 768px) {
+    .category-search,
+    .content-search,
+    .ipp-category .category-search.search-form,
+    .ipp-content .content-search,
+    .ipp-content .content-search.search-form {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* ============================================================
+   38. Hero title top-aligned + search button as magnifier icon
+   ============================================================ */
+/* Pin the hero title/blurb to the top of the hero card */
+.intro-text,
+.category-intro-module .intro-text { justify-content: flex-start; }
+
+/* Search button: white magnifying-glass icon (form keeps its green outline) */
+.search-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-button .search-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* ============================================================
+   39. Mobile: search above breadcrumb. Cards: icon beside text.
+   ============================================================ */
+/* On mobile the search bar sits above the breadcrumb (just below the
+   portal sub-menu) */
+@media (max-width: 768px) {
+    .category-search,
+    .content-search { order: -1; }
+}
+
+/* Cards: icon on the left, title + blurb on the right. The icon spans both
+   rows and is vertically centred, so it stays centred if the title wraps. */
+.subcategory-card,
+.portal-category-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 16px;
+    align-items: center;
+    text-align: left;
+    min-height: auto;
+}
+.subcategory-card > svg,
+.portal-category-card > svg,
+.portal-category-card > .category-icon {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+    margin: 0;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+.subcategory-card > h2,
+.portal-category-card > h2 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 0 4px;
+}
+.subcategory-card > p,
+.portal-category-card > p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+}
+
+/* ============================================================
+   40. Remove the grey divider at the bottom of portal pages
+   ============================================================ */
+.ipp-page .section-divider { display: none; }

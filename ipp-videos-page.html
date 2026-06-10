@@ -30,7 +30,7 @@
                 <div class="header-content">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="ipp-index.html" title="Home">
+                        <a href="index.html" title="Home">
                             <img src="images/cio_logo.jpg" alt="Citizens Information logo">
                         </a>
                     </div>
@@ -89,81 +89,61 @@
     <nav class="portal-nav">
         <div class="wrapper">
             <div class="portal-nav-content">
-                <!-- Portal Logo/Title - LEFT SIDE -->
+                <!-- Single hamburger: opens the full sitemap menu -->
+                <button class="portal-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="portal-menu-panel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Logo / branding (top left) -->
                 <div class="portal-branding">
                     <a href="ipp-homepage.html" class="portal-branding-link">
                         <img src="images/ipp-logo.png" alt="Your International Protection Guide" class="portal-logo">
                         <span class="portal-title">Your International Protection Guide</span>
                     </a>
                 </div>
-                
-                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+
+                <!-- About (visible at all breakpoints) -->
                 <div class="portal-nav-right">
-                    <!-- Desktop Links (hidden on mobile) -->
-                    <ul class="portal-links">
-                        <li><a href="ipp-about.html">About</a></li>
-                        <li><a href="ipp-videos-page.html" class="active">Videos</a></li>
-                        <li><a href="ipp-glossary.html">Glossary</a></li>
-                    </ul>
-                    
-                    <!-- Language Selector -->
-                    <div class="language-selector">
-                        <select id="language-select" aria-label="Select language">
-                            <option value="en">English</option>
-                            <option value="ar">العربية (Arabic)</option>
-                            <option value="ka">ქართული (Georgian)</option>
-                            <option value="so">Soomaali (Somali)</option>
-                            <option value="fr">Français (French)</option>
-                            <option value="ur">اردو (Urdu)</option>
-                            <option disabled>──── Other Languages ────</option>
-                            <option value="zh">中文 (Chinese)</option>
-                            <option value="fa">دری (Dari)</option>
-                            <option value="ps">پښتو (Pashto)</option>
-                            <option value="pl">Polski (Polish)</option>
-                            <option value="ro">Română (Romanian)</option>
-                            <option value="sn">chiShona (Shona)</option>
-                            <option value="es">Español (Spanish)</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Portal Mobile Menu Toggle -->
-                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                    <a href="ipp-about.html" class="portal-about-link">About</a>
+                </div>
+
+                <!-- Language switcher: sits on the right on desktop,
+                     drops to its own row below the bar on mobile -->
+                <div class="language-selector">
+                    <img src="images/earth-internationalization-language-switching-64.png" alt="" class="language-icon">
+                    <select id="language-select" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="ar">العربية (Arabic)</option>
+                        <option value="ka">ქართული (Georgian)</option>
+                        <option value="so">Soomaali (Somali)</option>
+                        <option value="fr">Français (French)</option>
+                        <option value="ur">اردو (Urdu)</option>
+                        <option disabled aria-label="separator between common and other languages">──── Other Languages ────</option>
+                        <option value="zh">中文 (Chinese)</option>
+                        <option value="fa">دری (Dari)</option>
+                        <option value="ps">پښتو (Pashto)</option>
+                        <option value="pl">Polski (Polish)</option>
+                        <option value="ro">Română (Romanian)</option>
+                        <option value="sn">chiShona (Shona)</option>
+                        <option value="es">Español (Spanish)</option>
+                    </select>
                 </div>
             </div>
         </div>
     </nav>
-    
-    <!-- Portal Mobile Navigation Panel -->
-    <nav class="portal-mobile-nav" role="navigation">
-        <ul>
-            <li><a href="ipp-about.html">About</a></li>
-                        <li><a href="ipp-videos-page.html">Videos</a></li>
-                        <li><a href="ipp-glossary.html">Glossary</a></li>
-        </ul>
-        <div class="portal-mobile-language">
-            <label for="mobile-language-select">Language:</label>
-            <select id="mobile-language-select" aria-label="Select language">
-                <option value="en">English</option>
-                <option value="ka">ქართული (Georgian)</option>
-                <option value="ar">العربية (Arabic)</option>
-                <option value="so">Soomaali (Somali)</option>
-                <option value="sn">chiShona (Shona)</option>
-                <option value="ur">اردو (Urdu)</option>
-                <option value="ps">پښتو (Pashto)</option>
-                <option value="fa">دری (Dari)</option>
-                <option value="fr">Français (French)</option>
-                <option value="es">Español (Spanish)</option>
-                <option value="pl">Polski (Polish)</option>
-                <option value="ro">Română (Romanian)</option>
-                <option value="zh">中文 (Chinese)</option>
-            </select>
+
+    <!-- Slide-in sitemap menu (list rendered by js/main.js) -->
+    <div class="portal-menu-overlay" hidden></div>
+    <nav id="portal-menu-panel" class="portal-menu-panel" aria-label="Site menu" aria-hidden="true">
+        <div class="portal-menu-panel-header">
+            <span>Menu</span>
+            <button class="portal-menu-close" aria-label="Close menu">&times;</button>
         </div>
+        <ul class="portal-menu-list" data-portal-menu></ul>
     </nav>
-    
+
     <!-- Main Content -->
     <main id="main-content">
         <div class="wrapper">
@@ -183,9 +163,9 @@
                     <input type="search" 
                            class="search-input" 
                            name="q" 
-                           placeholder="Search Your International Protection Guide..."
+                           placeholder="Search citizensinformation.ie..."
                            aria-label="Search videos">
-                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                    <button type="submit" class="search-button" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
                 </form>
             </div>
             

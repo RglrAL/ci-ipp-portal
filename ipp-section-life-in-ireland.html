@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life in Ireland - Your International Protection Guide</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ipp-page ipp-category">
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header (Same as Homepage) -->
+    <header class="site-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="language-switcher">
+                    <strong>English</strong> | 
+                    <a href="#" lang="ga">Gaeilge</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="wrapper">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="ipp-homepage.html" title="Home">
+                            <img src="images/cio_logo.jpg" alt="Citizens Information logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="main-nav" role="navigation">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">What's New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">My Situation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Find a Centre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Volunteering</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.facebook.com/citizensinformation/" class="nav-link" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Main Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel -->
+        <nav class="mobile-nav" role="navigation">
+            <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">My Situation</a></li>
+                <li><a href="#">Find a Centre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section (Smaller strip for category pages) -->
+    <section class="hero ipp-hero ipp-hero-strip">
+        <!-- Just the background image, no content -->
+    </section>
+    
+    <!-- Portal Navigation Bar (Same as homepage) -->
+    <nav class="portal-nav">
+        <div class="wrapper">
+            <div class="portal-nav-content">
+                <!-- Single hamburger: opens the full sitemap menu -->
+                <button class="portal-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="portal-menu-panel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Logo / branding (top left) -->
+                <div class="portal-branding">
+                    <a href="ipp-homepage.html" class="portal-branding-link">
+                        <img src="images/ipp-logo.png" alt="Your International Protection Guide" class="portal-logo">
+                        <span class="portal-title">Your International Protection Guide</span>
+                    </a>
+                </div>
+
+                <!-- About (visible at all breakpoints) -->
+                <div class="portal-nav-right">
+                    <a href="ipp-about.html" class="portal-about-link">About</a>
+                </div>
+
+                <!-- Language switcher: sits on the right on desktop,
+                     drops to its own row below the bar on mobile -->
+                <div class="language-selector">
+                    <img src="images/earth-internationalization-language-switching-64.png" alt="" class="language-icon">
+                    <select id="language-select" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="ar">العربية (Arabic)</option>
+                        <option value="ka">ქართული (Georgian)</option>
+                        <option value="so">Soomaali (Somali)</option>
+                        <option value="fr">Français (French)</option>
+                        <option value="ur">اردو (Urdu)</option>
+                        <option disabled aria-label="separator between common and other languages">──── Other Languages ────</option>
+                        <option value="zh">中文 (Chinese)</option>
+                        <option value="fa">دری (Dari)</option>
+                        <option value="ps">پښتو (Pashto)</option>
+                        <option value="pl">Polski (Polish)</option>
+                        <option value="ro">Română (Romanian)</option>
+                        <option value="sn">chiShona (Shona)</option>
+                        <option value="es">Español (Spanish)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slide-in sitemap menu (list rendered by js/main.js) -->
+    <div class="portal-menu-overlay" hidden></div>
+    <nav id="portal-menu-panel" class="portal-menu-panel" aria-label="Site menu" aria-hidden="true">
+        <div class="portal-menu-panel-header">
+            <span>Menu</span>
+            <button class="portal-menu-close" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="portal-menu-list" data-portal-menu></ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="wrapper">
+            <div class="breadcrumb-search-row">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+<a href="ipp-homepage.html">Your International Protection Guide</a>
+                    <span class="breadcrumb-separator">›</span>
+<span aria-current="page">Life in Ireland</span>
+                </nav>
+
+                <form class="search-form category-search" action="#" method="get">
+                    <input type="search" class="search-input" name="q" placeholder="Search citizensinformation.ie..." aria-label="Search">
+                    <button type="submit" class="search-button" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                </form>
+            </div>
+
+            <section class="category-intro-module">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <div class="category-title-with-icon"><svg class="category-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M32 28C32 28 24 20 24 14C24 10 27 7 32 7C37 7 40 10 40 14C40 20 32 28 32 28Z" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 28C32 28 20 24 14 24C10 24 7 27 7 32C7 37 10 40 14 40C20 40 28 32 28 32" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 28C32 28 44 24 50 24C54 24 57 27 57 32C57 37 54 40 50 40C44 40 36 32 36 32" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="32" y1="28" x2="32" y2="48" stroke="#008340" stroke-width="3" stroke-linecap="round"/>
+</svg><h1>Life in Ireland</h1></div>
+                        <p>Guidance for building your life in Ireland — covering health, education, work, money, safety, family, community and what comes after the protection process.</p>
+                        <p class="hero-intro-more">This is placeholder text to show how the introduction will read with fuller content. In the live guide this opening will give a clear, plain-English overview of this area — what it covers, who it is for, and where to go next — and will be available in multiple languages.</p>
+                    </div>
+                    <div class="intro-media">
+                        <img src="images/hero_images/Life_after_the_IP_process.original.png" alt="" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section class="subcategory-section">
+                <div class="subcategory-grid">
+                    <a href="ipp-category-about-ireland.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M32 28C32 28 24 20 24 14C24 10 27 7 32 7C37 7 40 10 40 14C40 20 32 28 32 28Z" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 28C32 28 20 24 14 24C10 24 7 27 7 32C7 37 10 40 14 40C20 40 28 32 28 32" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 28C32 28 44 24 50 24C54 24 57 27 57 32C57 37 54 40 50 40C44 40 36 32 36 32" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="32" y1="28" x2="32" y2="48" stroke="#008340" stroke-width="3" stroke-linecap="round"/></svg>
+                        <h2>About Ireland</h2>
+                        <p>Facts, culture, history, social norms and your rights in Ireland.</p>
+                    </a>
+
+                    <a href="ipp-category-education.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M32 14L58 24L32 34L6 24L32 14Z" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 29V42C18 42 24 48 32 48C40 48 46 42 46 42V29" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="58" y1="24" x2="58" y2="40" stroke="#008340" stroke-width="3" stroke-linecap="round"/></svg>
+                        <h2>Education</h2>
+                        <p>Schools, college, and learning English for you and your children.</p>
+                    </a>
+
+                    <a href="ipp-category-employment-and-money.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="24" stroke="#008340" stroke-width="3"/><path d="M41 24C39 21 35 20 32 20C26 20 22 26 22 32C22 38 26 44 32 44C35 44 39 43 41 40" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="16" y1="29" x2="35" y2="29" stroke="#008340" stroke-width="3" stroke-linecap="round"/><line x1="16" y1="35" x2="35" y2="35" stroke="#008340" stroke-width="3" stroke-linecap="round"/></svg>
+                        <h2>Employment and money</h2>
+                        <p>Permission to work, finding a job, tax, banking and your employment rights.</p>
+                    </a>
+
+                    <a href="ipp-category-transport-and-recreation.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="12" y="14" width="40" height="34" rx="4" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="34" x2="52" y2="34" stroke="#008340" stroke-width="3"/><line x1="32" y1="14" x2="32" y2="34" stroke="#008340" stroke-width="2"/><circle cx="22" cy="50" r="4" stroke="#008340" stroke-width="3"/><circle cx="42" cy="50" r="4" stroke="#008340" stroke-width="3"/></svg>
+                        <h2>Transport and recreation</h2>
+                        <p>Getting around, driving, and sport and the outdoors.</p>
+                    </a>
+
+                    <a href="ipp-category-safety-and-emergencies.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M32 8L48 16V32C48 44 40 52 32 56C24 52 16 44 16 32V16L32 8Z" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 32L30 36L38 28" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <h2>Safety and emergencies</h2>
+                        <p>What to do in an emergency, staying safe, and reporting a crime.</p>
+                    </a>
+
+                    <a href="ipp-category-your-health.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M32 50C32 50 12 38 12 24C12 17 17 12 24 12C28 12 31 14 32 17C33 14 36 12 40 12C47 12 52 17 52 24C52 38 32 50 32 50Z" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 30H27L30 24L34 36L37 30H44" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <h2>Your health</h2>
+                        <p>The Irish health system, pharmacies, mental health, dental care and more.</p>
+                    </a>
+
+                    <a href="ipp-category-relationships-and-community-support.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="24" cy="20" r="8" stroke="#008340" stroke-width="3"/><path d="M8 48C8 40 14 34 24 34C34 34 40 40 40 48" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44" cy="24" r="6" stroke="#008340" stroke-width="2"/><path d="M56 44C56 38 51 34 44 34" stroke="#008340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <h2>Relationships and community support</h2>
+                        <p>Support for relationships, family situations, and community life.</p>
+                    </a>
+
+                    <a href="ipp-category-parenting-and-children.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="16" r="6" stroke="#008340" stroke-width="3"/><path d="M20 36C20 30 25 26 32 26C39 26 44 30 44 36" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="28" r="4" stroke="#008340" stroke-width="2"/><circle cx="46" cy="28" r="4" stroke="#008340" stroke-width="2"/><path d="M8 44C8 40 11 37 16 37" stroke="#008340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 44C56 40 53 37 48 37" stroke="#008340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <h2>Parenting and children</h2>
+                        <p>Childcare, children's rights, and having a baby in Ireland.</p>
+                    </a>
+
+                    <a href="ipp-category-life-after-the-international-protection-process.html" class="subcategory-card">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="24" stroke="#008340" stroke-width="3"/><path d="M24 24C24 20 27 16 32 16C37 16 40 20 40 24C40 28 37 30 34 32C32 33 32 34 32 36" stroke="#008340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="44" r="2" fill="#008340"/></svg>
+                        <h2>Life after the international protection process</h2>
+                        <p>What changes after your decision — housing, work, welfare and citizenship.</p>
+                    </a>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+        </div>
+    </main>
+    
+    <!-- Footer (Same as Homepage) -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <!-- Categories -->
+                <div class="footer-categories">
+                    <div class="footer-section">
+                        <h3>Find information on...</h3>
+                        <ul>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Social Welfare</a></li>
+                            <li><a href="#">Employment</a></li>
+                            <li><a href="#">Money and Tax</a></li>
+                            <li><a href="#">Moving Country</a></li>
+                            <li><a href="#">Returning to Ireland</a></li>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Education and Training</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>&nbsp;</h3>
+                        <ul>
+                            <li><a href="#">Travel and Recreation</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">Consumer</a></li>
+                            <li><a href="#">Government in Ireland</a></li>
+                            <li><a href="#">Death and Bereavement</a></li>
+                            <li><a href="#">Family and Relationships</a></li>
+                            <li><a href="#">Justice</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- About -->
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Citizens Information</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Privacy statement</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="tel:0818074000">Phone CIPS 0818 07 4000</a> | 
+                    <a href="#">Visit your local CIC</a> | 
+                    <a href="#">View our publications</a>
+                </div>
+                
+                <div class="social-links">
+                    <!-- Social icons would go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

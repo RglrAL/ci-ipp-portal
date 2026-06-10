@@ -613,6 +613,7 @@ function initIPPFeatures() {
     initIPPLanguageSelector();
     initIPPPortalNav();
     initIPPCategoryTracking();
+    initPortalMenu();
 }
 
 // Run IPP features on DOM ready
@@ -623,165 +624,399 @@ if (document.readyState === 'loading') {
 }
 
 
-/**
- * Mobile Dual Menu System for IPP Portal - FIXED VERSION
- * Replace your existing initPortalMobileMenu function with this
- */
+/* ============================================================
+   YIPG Portal Menu - single hamburger that opens the full
+   sitemap as a slide-in accordion panel. (2026 redesign)
+   The sitemap lives in ONE place below so it is easy to
+   repoint when this moves to UAT.
+   ============================================================ */
 
-// Portal Mobile Menu Functionality
-function initPortalMobileMenu() {
-    // Always check if we're on an IPP page and add the class
-    const isIPPPage = document.querySelector('.ipp-hero') !== null;
-    if (isIPPPage) {
-        document.body.classList.add('ipp-page');
-    }
-    
-    const portalMenuToggle = document.querySelector('.portal-menu-toggle');
-    const portalMobileNav = document.querySelector('.portal-mobile-nav');
-    const mainMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mainMobileNav = document.querySelector('.mobile-nav');
-    
-    // Only proceed with mobile menu setup if elements exist
-    if (!portalMenuToggle || !portalMobileNav) return;
-    
-    // Portal menu toggle
-    portalMenuToggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        togglePortalMenu();
-    });
-    
-    // Close portal menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (portalMobileNav.classList.contains('active') && 
-            !portalMobileNav.contains(e.target) && 
-            !portalMenuToggle.contains(e.target)) {
-            closePortalMenu();
-        }
-    });
-    
-    // Handle language selector in mobile portal menu
-    const mobileLanguageSelect = document.getElementById('mobile-language-select');
-    if (mobileLanguageSelect) {
-        // First, populate it with all languages
-        const mainLanguageSelect = document.getElementById('language-select');
-        if (mainLanguageSelect) {
-            mobileLanguageSelect.innerHTML = mainLanguageSelect.innerHTML;
-        }
-        
-        mobileLanguageSelect.addEventListener('change', function(e) {
-            // Sync with main language selector
-            if (mainLanguageSelect) {
-                mainLanguageSelect.value = e.target.value;
-                // Trigger change event on main selector
-                mainLanguageSelect.dispatchEvent(new Event('change'));
+const IPP_SITEMAP = [
+    {
+        title: 'International protection in Ireland',
+        href: 'ipp-section-international-protection.html',
+        children: [
+            {
+                title: 'Applying for international protection',
+                href: 'ipp-category-applying-for-international-protection.html',
+                children: [
+                    { title: 'The steps of applying for international protection', href: 'ipp-content-the-steps-of-applying-for-international-protection.html' },
+                    { title: 'If your application is inadmissible', href: '#' },
+                    { title: 'International protection explained', href: '#' },
+                    { title: 'How to find the International Protection Office', href: '#' },
+                    { title: 'Your rights during the application process', href: '#' },
+                    { title: 'Your duties during the application process', href: '#' }
+                ]
+            },
+            {
+                title: 'After your decision',
+                href: 'ipp-category-after-your-decision.html',
+                children: [
+                    { title: 'Next steps after a successful decision', href: 'ipp-content-next-steps-after-a-successful-decision.html' },
+                    { title: 'Voluntary return', href: '#' },
+                    { title: 'Appealing a decision from the IPO', href: '#' }
+                ]
+            },
+            {
+                title: 'Help with your application',
+                href: 'ipp-category-help-with-your-application.html',
+                children: [
+                    { title: 'Legal help with your application', href: 'ipp-content-legal-help-with-your-application.html' },
+                    { title: 'Support while you wait for a decision', href: '#' }
+                ]
             }
-        });
+        ]
+    },
+    {
+        title: 'Living in an accommodation centre',
+        href: 'ipp-section-accommodation.html',
+        children: [
+            {
+                title: 'Supports available',
+                href: 'ipp-category-supports-available.html',
+                children: [
+                    { title: 'Social welfare payments', href: 'ipp-content-social-welfare-payments.html' },
+                    { title: 'What happens if you do not get accommodation', href: '#' },
+                    { title: 'Transport to medical appointments', href: '#' }
+                ]
+            },
+            {
+                title: 'Life in an accommodation centre',
+                href: 'ipp-category-life-in-an-accommodation-centre.html',
+                children: [
+                    { title: 'Complaints about your accommodation centre', href: 'ipp-content-complaints-about-your-accommodation-centre.html' },
+                    { title: 'What to expect in an accommodation centre', href: '#' },
+                    { title: 'Moving to a new accommodation centre', href: '#' }
+                ]
+            },
+            {
+                title: 'Documents you need',
+                href: 'ipp-category-documents-you-need.html',
+                children: [
+                    { title: 'Getting your Temporary Residence Certificate', href: 'ipp-content-getting-your-temporary-residence-certificate.html' },
+                    { title: 'How to get your PPS number, PSC card and myGov ID', href: '#' }
+                ]
+            }
+        ]
+    },
+    {
+        title: 'Life in Ireland',
+        href: 'ipp-section-life-in-ireland.html',
+        children: [
+            {
+                title: 'About Ireland',
+                href: 'ipp-category-about-ireland.html',
+                children: [
+                    { title: 'Ireland: Facts and figures', href: 'ipp-content-ireland-facts-and-figures.html' },
+                    { title: 'Get to know Irish culture', href: '#' },
+                    { title: 'Festivals and holidays in Ireland', href: '#' },
+                    { title: 'Irish people and social norms', href: '#' },
+                    { title: 'Your rights in Ireland', href: '#' },
+                    { title: 'A short history of Ireland', href: '#' },
+                    { title: 'Rights and equality in Ireland', href: '#' }
+                ]
+            },
+            {
+                title: 'Education',
+                href: 'ipp-category-education.html',
+                children: [
+                    { title: 'Going to primary school', href: 'ipp-content-going-to-primary-school.html' },
+                    { title: 'Going to post-primary school', href: '#' },
+                    { title: 'Sending your child to school', href: '#' },
+                    { title: 'Going to college or university', href: '#' },
+                    { title: 'Support for going to college', href: '#' },
+                    { title: 'Learning English', href: '#' }
+                ]
+            },
+            {
+                title: 'Employment and money',
+                href: 'ipp-category-employment-and-money.html',
+                children: [
+                    { title: 'Permission to work', href: 'ipp-content-permission-to-work.html' },
+                    { title: 'How to open a bank account', href: '#' },
+                    { title: 'Paying tax in Ireland', href: '#' },
+                    { title: 'How to read your payslip', href: '#' },
+                    { title: 'Finding a job as an international protection applicant', href: '#' },
+                    { title: 'How to get your qualifications recognised', href: '#' },
+                    { title: 'Volunteering', href: '#' },
+                    { title: 'Your employment rights', href: '#' }
+                ]
+            },
+            {
+                title: 'Transport and recreation',
+                href: 'ipp-category-transport-and-recreation.html',
+                children: [
+                    { title: 'Public transport in Ireland', href: 'ipp-content-public-transport-in-ireland.html' },
+                    { title: 'Driving and road safety', href: '#' },
+                    { title: 'Sports and the outdoors', href: '#' }
+                ]
+            },
+            {
+                title: 'Safety and emergencies',
+                href: 'ipp-category-safety-and-emergencies.html',
+                children: [
+                    { title: 'What to do in an emergency', href: 'ipp-content-what-to-do-in-an-emergency.html' },
+                    { title: '[Sexual crimes and related crimes]', href: '#' },
+                    { title: 'Crime and safety', href: '#' },
+                    { title: 'Hate crime', href: '#' },
+                    { title: 'Scams and how to avoid them', href: '#' },
+                    { title: 'Reporting a crime', href: '#' }
+                ]
+            },
+            {
+                title: 'Your health',
+                href: 'ipp-category-your-health.html',
+                children: [
+                    { title: 'The Irish health system', href: 'ipp-content-the-irish-health-system.html' },
+                    { title: 'Your local pharmacy', href: '#' },
+                    { title: 'Alcohol and drug addiction support', href: '#' },
+                    { title: 'Vaccinations', href: '#' },
+                    { title: 'Dental, eye and hearing care', href: '#' },
+                    { title: 'Mental health support in Ireland', href: '#' },
+                    { title: 'Sexual health and contraception', href: '#' },
+                    { title: 'Help for female genital mutilation (FGM)', href: '#' }
+                ]
+            },
+            {
+                title: 'Relationships and community support',
+                href: 'ipp-category-relationships-and-community-support.html',
+                children: [
+                    { title: 'Help for domestic abuse', href: 'ipp-content-help-for-domestic-abuse.html' },
+                    { title: 'Divorce in Ireland', href: '#' },
+                    { title: 'Marriage in Ireland', href: '#' },
+                    { title: 'LGBTIQ+ rights and community', href: '#' },
+                    { title: 'Social, cultural, and religious supports', href: '#' },
+                    { title: 'Community integration', href: '#' }
+                ]
+            },
+            {
+                title: 'Parenting and children',
+                href: 'ipp-category-parenting-and-children.html',
+                children: [
+                    { title: 'Childcare and early childhood education', href: 'ipp-content-childcare-and-early-childhood-education.html' },
+                    { title: 'Children’s rights and safety', href: '#' },
+                    { title: 'Having a baby in Ireland', href: '#' }
+                ]
+            },
+            {
+                title: 'Life after the international protection process',
+                href: 'ipp-category-life-after-the-international-protection-process.html',
+                children: [
+                    { title: 'Social welfare changes', href: 'ipp-content-social-welfare-changes.html' },
+                    { title: 'Renting and finding housing', href: '#' },
+                    { title: 'Finding a job after your decision', href: '#' },
+                    { title: 'Citizenship', href: '#' },
+                    { title: 'Leaving the accommodation centre', href: '#' }
+                ]
+            }
+        ]
     }
-    
-    function togglePortalMenu() {
-        const isActive = portalMobileNav.classList.contains('active');
-        
-        if (isActive) {
-            closePortalMenu();
+];
+
+// Smoothly expand a sub-list from 0 to its content height, then release to
+// auto so nested items can grow it further.
+function expandSub(sub) {
+    sub.hidden = false;
+    sub.style.height = '0px';
+    sub.offsetHeight; // force reflow so the transition runs
+    sub.style.height = sub.scrollHeight + 'px';
+    const done = function(e) {
+        if (e.target !== sub || e.propertyName !== 'height') return;
+        sub.style.height = '';
+        sub.removeEventListener('transitionend', done);
+    };
+    sub.addEventListener('transitionend', done);
+}
+
+// Smoothly collapse a sub-list to 0, then hide it.
+function collapseSub(sub) {
+    sub.style.height = sub.scrollHeight + 'px';
+    sub.offsetHeight;
+    sub.style.height = '0px';
+    const done = function(e) {
+        if (e.target !== sub || e.propertyName !== 'height') return;
+        sub.hidden = true;
+        sub.style.height = '';
+        sub.removeEventListener('transitionend', done);
+    };
+    sub.addEventListener('transitionend', done);
+}
+
+// Collapse a group (animating its own sub) and reset any open descendants so
+// it reopens clean. Used for the section-level accordion.
+function collapseGroup(g) {
+    const btn = g.querySelector(':scope > .portal-menu-row > .portal-menu-expand');
+    const sub = g.querySelector(':scope > .portal-menu-sub');
+    g.classList.remove('open');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    if (sub && !sub.hidden) collapseSub(sub);
+    // snap inner descendants closed (hidden inside the collapsing section)
+    g.querySelectorAll('.portal-menu-group.open').forEach(function(node) {
+        node.classList.remove('open');
+        const b = node.querySelector(':scope > .portal-menu-row > .portal-menu-expand');
+        const s = node.querySelector(':scope > .portal-menu-sub');
+        if (b) b.setAttribute('aria-expanded', 'false');
+        if (s) { s.hidden = true; s.style.height = ''; }
+    });
+}
+
+// One menu node. Items with children render as an expandable accordion row;
+// leaf items (individual pages) render as a plain link. Recurses for the
+// 3-level tree: Section -> Category -> Page.
+function buildMenuNode(item, level, idPath) {
+    const hasChildren = item.children && item.children.length;
+
+    if (!hasChildren) {
+        const leaf = document.createElement('li');
+        leaf.className = 'portal-menu-leaf level-' + level;
+        const a = document.createElement('a');
+        a.className = 'portal-menu-sublink';
+        a.href = item.href;
+        a.textContent = item.title;
+        leaf.appendChild(a);
+        return leaf;
+    }
+
+    const group = document.createElement('li');
+    group.className = 'portal-menu-group level-' + level;
+
+    const row = document.createElement('div');
+    row.className = 'portal-menu-row';
+
+    const link = document.createElement('a');
+    link.className = 'portal-menu-cat';
+    link.href = item.href;
+    link.textContent = item.title;
+
+    const sub = document.createElement('ul');
+    sub.className = 'portal-menu-sub';
+    sub.id = 'portal-sub-' + idPath;
+    sub.hidden = true;
+
+    const expand = document.createElement('button');
+    expand.className = 'portal-menu-expand';
+    expand.setAttribute('aria-expanded', 'false');
+    expand.setAttribute('aria-controls', sub.id);
+    expand.setAttribute('aria-label', 'Show ' + item.title);
+    expand.innerHTML = '<span></span>';
+    expand.addEventListener('click', function() {
+        const willOpen = expand.getAttribute('aria-expanded') !== 'true';
+        if (willOpen) {
+            // Accordion at the SECTION level only (one section open at a time).
+            // Categories within a section toggle freely.
+            if (level === 1) {
+                Array.prototype.forEach.call(group.parentElement.children, function(sib) {
+                    if (sib !== group && sib.classList.contains('open')) collapseGroup(sib);
+                });
+            }
+            expand.setAttribute('aria-expanded', 'true');
+            group.classList.add('open');
+            expandSub(sub);
         } else {
-            // Close main menu if open
-            if (mainMobileNav && mainMobileNav.classList.contains('active')) {
-                closeMainMenu();
-            }
-            openPortalMenu();
-        }
-    }
-    
-    function openPortalMenu() {
-        portalMobileNav.classList.add('active');
-        portalMenuToggle.classList.add('active');
-        portalMenuToggle.setAttribute('aria-expanded', 'true');
-        document.body.classList.add('portal-menu-open');
-        
-        // Focus first link
-        const firstLink = portalMobileNav.querySelector('a');
-        if (firstLink) firstLink.focus();
-    }
-    
-    function closePortalMenu() {
-        portalMobileNav.classList.remove('active');
-        portalMenuToggle.classList.remove('active');
-        portalMenuToggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('portal-menu-open');
-    }
-    
-    // Update main menu functions to work with portal menu
-    function closeMainMenu() {
-        if (mainMobileNav) {
-            mainMobileNav.classList.remove('active');
-        }
-        if (mainMenuToggle) {
-            mainMenuToggle.classList.remove('active');
-            mainMenuToggle.setAttribute('aria-expanded', 'false');
-        }
-        document.body.classList.remove('mobile-menu-open');
-    }
-    
-    // Escape key closes both menus
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closePortalMenu();
-            closeMainMenu();
+            expand.setAttribute('aria-expanded', 'false');
+            group.classList.remove('open');
+            collapseSub(sub);
         }
     });
-    
-    // Handle window resize
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
-            if (window.innerWidth > 1080) {
-                closePortalMenu();
-                closeMainMenu();
-            }
-        }, 250);
+
+    row.appendChild(link);
+    row.appendChild(expand);
+
+    item.children.forEach(function(child, i) {
+        sub.appendChild(buildMenuNode(child, level + 1, idPath + '-' + i));
+    });
+
+    group.appendChild(row);
+    group.appendChild(sub);
+    return group;
+}
+
+function buildPortalMenu() {
+    const list = document.querySelector('[data-portal-menu]');
+    if (!list || list.children.length) return;
+
+    // About lives in the bar on desktop; on mobile it moves into this menu,
+    // at the top above the sections. CSS shows this item only on mobile.
+    const about = document.createElement('li');
+    about.className = 'portal-menu-leaf portal-menu-extra level-1';
+    const aboutLink = document.createElement('a');
+    aboutLink.className = 'portal-menu-sublink portal-menu-extra-link';
+    aboutLink.href = 'ipp-about.html';
+    aboutLink.textContent = 'About';
+    about.appendChild(aboutLink);
+    list.appendChild(about);
+
+    IPP_SITEMAP.forEach(function(section, i) {
+        list.appendChild(buildMenuNode(section, 1, String(i)));
+    });
+}
+
+function initPortalMenu() {
+    const toggle = document.querySelector('.portal-menu-toggle');
+    const panel = document.getElementById('portal-menu-panel');
+    const overlay = document.querySelector('.portal-menu-overlay');
+    const closeBtn = document.querySelector('.portal-menu-close');
+    if (!toggle || !panel || !overlay) return;
+
+    buildPortalMenu();
+
+    function openMenu() {
+        overlay.hidden = false;
+        requestAnimationFrame(function() {
+            overlay.classList.add('open');
+            panel.classList.add('open');
+        });
+        panel.setAttribute('aria-hidden', 'false');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.classList.add('active');
+        document.body.classList.add('portal-menu-open');
+        const first = panel.querySelector('a, button');
+        if (first) first.focus();
+    }
+
+    function closeMenu() {
+        overlay.classList.remove('open');
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.classList.remove('active');
+        document.body.classList.remove('portal-menu-open');
+        setTimeout(function() {
+            if (!panel.classList.contains('open')) overlay.hidden = true;
+        }, 300);
+    }
+
+    toggle.addEventListener('click', function() {
+        if (panel.classList.contains('open')) closeMenu(); else openMenu();
+    });
+    overlay.addEventListener('click', closeMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel.classList.contains('open')) {
+            closeMenu();
+            toggle.focus();
+        }
     });
 }
 
 
-// Main Navigation Mobile Menu Toggle
+// Main (Citizens Information) header mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileNav = document.querySelector('.mobile-nav');
-    
+
     if (mobileMenuToggle && mobileNav) {
         mobileMenuToggle.addEventListener('click', function() {
             this.classList.toggle('active');
             mobileNav.classList.toggle('active');
             document.body.classList.toggle('mobile-menu-open');
-            
-            // Update aria-expanded
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
-            
-            // DON'T change textContent or innerHTML!
+            this.setAttribute('aria-expanded', String(!isExpanded));
         });
     }
-    
-    // Portal navigation mobile menu
-    const portalMenuToggle = document.querySelector('.portal-menu-toggle');
-    const portalMobileNav = document.querySelector('.portal-mobile-nav');
-    
-    if (portalMenuToggle && portalMobileNav) {
-        portalMenuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            portalMobileNav.classList.toggle('active');
-            document.body.classList.toggle('portal-menu-open');
-            
-            // Update aria-expanded
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
-        });
-    }
-    
-    // Close menus when clicking outside
+
+    // Close main menu when clicking outside
     document.addEventListener('click', function(event) {
-        // Close main menu
         if (!event.target.closest('.mobile-menu-toggle') && !event.target.closest('.mobile-nav')) {
             if (mobileNav && mobileNav.classList.contains('active')) {
                 mobileMenuToggle.classList.remove('active');
@@ -790,42 +1025,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
             }
         }
-        
-        // Close portal menu
-        if (!event.target.closest('.portal-menu-toggle') && !event.target.closest('.portal-mobile-nav')) {
-            if (portalMobileNav && portalMobileNav.classList.contains('active')) {
-                portalMenuToggle.classList.remove('active');
-                portalMobileNav.classList.remove('active');
-                document.body.classList.remove('portal-menu-open');
-                portalMenuToggle.setAttribute('aria-expanded', 'false');
-            }
-        }
     });
-    
-    // Handle window resize
+
+    // Close main menu when resizing up to desktop
     let resizeTimer;
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
-            if (window.innerWidth > 1080) {
-                // Close mobile menus on desktop
-                if (mobileNav) {
-                    mobileMenuToggle.classList.remove('active');
-                    mobileNav.classList.remove('active');
-                    document.body.classList.remove('mobile-menu-open');
-                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                }
-                if (portalMobileNav) {
-                    portalMenuToggle.classList.remove('active');
-                    portalMobileNav.classList.remove('active');
-                    document.body.classList.remove('portal-menu-open');
-                    portalMenuToggle.setAttribute('aria-expanded', 'false');
-                }
+            if (window.innerWidth > 1080 && mobileNav && mobileNav.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.classList.remove('mobile-menu-open');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
             }
         }, 250);
     });
 });
-
-
-
 
