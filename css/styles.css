@@ -5935,11 +5935,18 @@ body.ipp-about {
     z-index: 1001;
     box-shadow: 2px 0 18px rgba(0, 0, 0, 0.28);
     transform: translateX(-100%);
-    transition: transform .3s ease;
+    /* Hidden from keyboard tab order + assistive tech when closed; visibility
+       flips after the slide-out so the close animation still plays */
+    visibility: hidden;
+    transition: transform .3s ease, visibility 0s linear .3s;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
-.portal-menu-panel.open { transform: translateX(0); }
+.portal-menu-panel.open {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform .3s ease, visibility 0s;
+}
 
 .portal-menu-panel-header {
     position: sticky;
@@ -6270,3 +6277,14 @@ body.ipp-about {
    40. Remove the grey divider at the bottom of portal pages
    ============================================================ */
 .ipp-page .section-divider { display: none; }
+
+/* ============================================================
+   41. A11y: search button uses brand green for safer contrast
+   (white icon on #008340 ≈ 4.9:1 vs ~3:1 on the lighter green)
+   ============================================================ */
+.search-button,
+.category-search .search-button,
+.content-search .search-button,
+.sidebar-search .search-button {
+    background: #008340;
+}
