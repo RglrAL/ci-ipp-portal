@@ -8,189 +8,6 @@
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- CHANGED: Level 1 refresh styles. These override styles.css and can be
-         moved into it once agreed. -->
-    <style>
-        /* Intro: plain text on the page, no card, so it doesn't look clickable */
-        .ipp-page .intro-module {
-            background: none;
-            border: 0;
-            border-radius: 0;
-            box-shadow: none;
-            margin: 0;
-            padding: 24px 0 56px;
-        }
-        .ipp-page .intro-content {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 460px);
-            gap: 64px;
-            align-items: center;
-        }
-        .ipp-page .intro-text {
-            max-width: 640px;
-        }
-        .ipp-page .intro-text h1 {
-            margin: 0 0 16px;
-            font-size: 2.375rem;
-            line-height: 1.2;
-            color: #007A3A;
-        }
-        .ipp-page .intro-text p {
-            margin: 0 0 16px;
-            font-size: 1.125rem;
-            line-height: 1.65;
-        }
-        .ipp-page .intro-text p:last-child {
-            margin-bottom: 0;
-        }
-        .ipp-page .intro-media img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-
-        /* Topics: full-width grey band so the cards are the clickable layer */
-        .ipp-page .portal-categories {
-            background: #F2F4F3;
-            padding: 56px 0 72px;
-        }
-        .ipp-page .portal-categories-heading {
-            margin: 0 0 28px;
-            font-size: 1.625rem;
-            line-height: 1.3;
-            color: #1E2B25;
-        }
-        .ipp-page .category-cards {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 24px;
-        }
-        .ipp-page .portal-category-card {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            padding: 32px;
-            background: #FFFFFF;
-            border: 1px solid #DDE3E0;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(20, 40, 30, 0.06);
-            color: #2E2E2E;
-            text-decoration: none;
-        }
-        .ipp-page .portal-category-card:hover {
-            border-color: #007A3A;
-        }
-        .ipp-page .portal-category-card:hover .portal-category-title {
-            text-decoration: underline;
-        }
-        .ipp-page .portal-category-card:focus-visible {
-            outline: 3px solid #0B5CAD;
-            outline-offset: 3px;
-        }
-        .ipp-page .portal-category-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .ipp-page .portal-category-card .category-icon {
-            flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-        }
-        .ipp-page .portal-category-title {
-            margin: 0;
-            font-size: 1.375rem;
-            line-height: 1.3;
-            color: #007A3A;
-        }
-        .ipp-page .portal-category-card p {
-            margin: 0;
-            font-size: 1.0625rem;
-            line-height: 1.6;
-        }
-        .ipp-page .card-arrow {
-            margin-top: auto;
-            width: 26px;
-            height: 26px;
-            color: #007A3A;
-        }
-
-        /* Skip link becomes visible when keyboard users tab to it */
-        .ipp-page a.sr-only:focus {
-            position: absolute;
-            top: 8px;
-            left: 8px;
-            z-index: 1000;
-            width: auto;
-            height: auto;
-            margin: 0;
-            padding: 8px 16px;
-            overflow: visible;
-            clip: auto;
-            clip-path: none;
-            white-space: normal;
-            background: #FFFFFF;
-            color: #0B5CAD;
-        }
-
-        /* Tablet: stack intro, one column of cards */
-        @media (max-width: 900px) {
-            .ipp-page .intro-content {
-                grid-template-columns: minmax(0, 1fr);
-                gap: 24px;
-            }
-            .ipp-page .intro-media {
-                max-width: 460px;
-            }
-            .ipp-page .category-cards {
-                grid-template-columns: minmax(0, 1fr);
-                gap: 14px;
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 600px) {
-            .ipp-page .intro-module {
-                padding: 16px 0 32px;
-            }
-            .ipp-page .intro-text h1 {
-                font-size: 1.6875rem;
-            }
-            .ipp-page .intro-text p {
-                font-size: 1.0625rem;
-                line-height: 1.6;
-            }
-            .ipp-page .intro-media {
-                max-width: 360px;
-            }
-            .ipp-page .portal-categories {
-                padding: 32px 0 48px;
-            }
-            .ipp-page .portal-categories-heading {
-                margin-bottom: 18px;
-                font-size: 1.375rem;
-            }
-            .ipp-page .portal-category-card {
-                gap: 12px;
-                padding: 22px 20px;
-            }
-            .ipp-page .portal-category-card .category-icon {
-                width: 40px;
-                height: 40px;
-            }
-            .ipp-page .portal-category-title {
-                font-size: 1.25rem;
-            }
-            .ipp-page .portal-category-card p {
-                font-size: 1rem;
-            }
-            .ipp-page .card-arrow {
-                width: 24px;
-                height: 24px;
-            }
-        }
-    </style>
 </head>
 <body class="ipp-page">
     <!-- Skip to main content link -->
@@ -343,17 +160,15 @@
     <!-- Main Content -->
     <main id="main-content">
         <div class="wrapper">
-            <!-- Intro Text/Video Module
-                 CHANGED: no longer styled as a card (see styles in head) -->
+            <!-- Intro: plain text and image, not a card (styles.css section 36) -->
             <section class="intro-module">
                 <div class="intro-content">
                     <div class="intro-text">
-                        <h1>Your International Protection Guide</h1>
-                        This guide explains how to apply for international protection, your rights while waiting for a decision, and what happens next.
-
-It also includes information about living in Ireland, like getting permission to work and taking care of your health.
-
-You can translate the text into another language using the option at the top of each page </div>
+                        <h1>Information for international protection applicants</h1>
+                        <p>This guide explains how to apply for international protection, your rights while waiting for a decision, and what happens next.</p>
+                        <p>It also includes information about living in Ireland, like getting permission to work and taking care of your health.</p>
+                        <p>You can translate the text into another language using the option at the top of each page.</p>
+                    </div>
                     <div class="intro-media">
                         <img src="images/hero_images/Two_male_and_female_outdoors.original%20Home%20page.png" alt="" loading="lazy">
                     </div>
@@ -361,11 +176,9 @@ You can translate the text into another language using the option at the top of 
             </section>
         </div>
 
-        <!-- Category Cards
-             CHANGED: moved outside .wrapper so the grey band runs full width,
-             added a section heading, card titles are now h3 under it,
-             icon and title sit side by side, and each card has an arrow -->
-        <section class="portal-categories" aria-labelledby="topics-heading">
+        <!-- Category cards: icon and title on one row, description below
+             (styles.css section 39) -->
+        <section class="portal-categories" aria-label="Guide topics">
             <div class="wrapper">
                 
                 <div class="category-cards">
@@ -382,8 +195,7 @@ You can translate the text into another language using the option at the top of 
                             </svg>
                             <h3 class="portal-category-title">International protection in Ireland</h3>
                         </div>
-                        <p>Everything you need to understand and navigate the international protection process in Ireland — from making your application, to what happens after a decision, and where to get help along the way.</p>
-                        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <p>How to apply for international protection, your rights during your application, and finding support.</p>
                     </a>
 
                     <a href="ipp-section-accommodation.html" class="portal-category-card">
@@ -396,8 +208,7 @@ You can translate the text into another language using the option at the top of 
                             </svg>
                             <h3 class="portal-category-title">Living in an accommodation centre</h3>
                         </div>
-                        <p>Practical information about daily life in an accommodation centre — the supports available to you, what to expect day to day, and the documents you will need.</p>
-                        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <p>What to expect while you live in an accommodation centre, social welfare and documents you need.</p>
                     </a>
 
                     <a href="ipp-section-life-in-ireland.html" class="portal-category-card">
@@ -410,13 +221,11 @@ You can translate the text into another language using the option at the top of 
                             </svg>
                             <h3 class="portal-category-title">Life in Ireland</h3>
                         </div>
-                        <p>Guidance for building your life in Ireland — covering health, education, work, money, safety, family, community and what comes after the protection process.</p>
-                        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <p>About Ireland, your health, education, parenting, employment, transport, recreation, life after the process.</p>
                     </a>
                 </div>
             </div>
         </section>
-        <!-- CHANGED: removed the bottom section divider; the grey band now ends at the footer -->
     </main>
     
     <!-- Footer (Same as CI) -->
