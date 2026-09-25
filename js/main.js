@@ -935,16 +935,23 @@ function buildPortalMenu() {
     const list = document.querySelector('[data-portal-menu]');
     if (!list || list.children.length) return;
 
-    // About lives in the bar on desktop; on mobile it moves into this menu,
-    // at the top above the sections. CSS shows this item only on mobile.
-    const about = document.createElement('li');
-    about.className = 'portal-menu-leaf portal-menu-extra level-1';
-    const aboutLink = document.createElement('a');
-    aboutLink.className = 'portal-menu-sublink portal-menu-extra-link';
-    aboutLink.href = 'ipp-about.html';
-    aboutLink.textContent = 'About';
-    about.appendChild(aboutLink);
-    list.appendChild(about);
+    // About, Videos and Glossary live in the bar on desktop; on mobile they
+    // move into this menu, at the top above the sections. CSS shows these
+    // items only on mobile.
+    [
+        { title: 'About', href: 'ipp-about.html' },
+        { title: 'Videos', href: 'ipp-videos-page.html' },
+        { title: 'Glossary', href: 'ipp-glossary.html' }
+    ].forEach(function(extra) {
+        const item = document.createElement('li');
+        item.className = 'portal-menu-leaf portal-menu-extra level-1';
+        const link = document.createElement('a');
+        link.className = 'portal-menu-sublink portal-menu-extra-link';
+        link.href = extra.href;
+        link.textContent = extra.title;
+        item.appendChild(link);
+        list.appendChild(item);
+    });
 
     IPP_SITEMAP.forEach(function(section, i) {
         list.appendChild(buildMenuNode(section, 1, String(i)));
