@@ -85,59 +85,65 @@
         <!-- Just the background image, no content -->
     </section>
     
-    <!-- Portal Navigation Bar (Same as homepage) -->
+    <!-- Portal Navigation Bar (Below Hero) - STAYS VISIBLE ON MOBILE -->
     <nav class="portal-nav">
         <div class="wrapper">
             <div class="portal-nav-content">
-                <!-- Portal Logo/Title - LEFT SIDE -->
+                <!-- Single hamburger: opens the full sitemap menu -->
+                <button class="portal-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="portal-menu-panel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Logo / branding (top left) -->
                 <div class="portal-branding">
-    <a href="ipp-homepage.html" class="portal-branding-link">
-        <img src="images/ipp-logo.png" alt="Your International Protection Guide" class="portal-logo">
-        <span class="portal-title">Your International Protection Guide</span>
-    </a>
-</div>
-                
-                <!-- Portal Links and Language Selector - RIGHT SIDE -->
+                    <a href="ipp-homepage.html" class="portal-branding-link">
+                        <img src="images/ipp-logo.png" alt="Your International Protection Guide" class="portal-logo">
+                        <span class="portal-title">Your International Protection Guide</span>
+                    </a>
+                </div>
+
+                <!-- About (visible at all breakpoints) -->
                 <div class="portal-nav-right">
-                    <!-- Desktop Links (hidden on mobile) -->
-                    <ul class="portal-links">
-                        <li><a href="pp-about.html">About</a></li>
-                        <li><a href="ipp-videos-page.html">Videos</a></li>
-                        <li><a href="ipp-glossary.html">Glossary</a></li>
-                    </ul>
-                    
-                    <!-- Language Selector -->
-                    <div class="language-selector">
-                        <select id="language-select" aria-label="Select language">
-                            <option value="en">English</option>
-                            <!-- Top 5 most used languages -->
-                            <option value="ar">العربية (Arabic)</option>
-                            <option value="ka">ქართული (Georgian)</option>
-                            <option value="so">Soomaali (Somali)</option>
-                            <option value="fr">Français (French)</option>
-                            <option value="ur">اردو (Urdu)</option>
-                            <!-- Visual separator -->
-                            <option disabled aria-label="separator between common and other languages">──── Other Languages ────</option>
-                            <!-- Remaining languages alphabetically -->
-                            <option value="zh">中文 (Chinese)</option>
-                            <option value="fa">دری (Dari)</option>
-                            <option value="ps">پښتو (Pashto)</option>
-                            <option value="pl">Polski (Polish)</option>
-                            <option value="ro">Română (Romanian)</option>
-                            <option value="sn">chiShona (Shona)</option>
-                            <option value="es">Español (Spanish)</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Portal Mobile Menu Toggle -->
-                    <button class="portal-menu-toggle" aria-label="Portal Menu" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                    <a href="ipp-about.html" class="portal-bar-link">About</a>
+                    <a href="ipp-videos-page.html" class="portal-bar-link">Videos</a>
+                    <a href="ipp-glossary.html" class="portal-bar-link">Glossary</a>
+                </div>
+
+                <!-- Language switcher: sits on the right on desktop,
+                     drops to its own row below the bar on mobile -->
+                <div class="language-selector">
+                    <img src="images/earth-internationalization-language-switching-64.png" alt="" class="language-icon">
+                    <select id="language-select" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="ar">العربية (Arabic)</option>
+                        <option value="ka">ქართული (Georgian)</option>
+                        <option value="so">Soomaali (Somali)</option>
+                        <option value="fr">Français (French)</option>
+                        <option value="ur">اردو (Urdu)</option>
+                        <option disabled aria-label="separator between common and other languages">──── Other Languages ────</option>
+                        <option value="zh">中文 (Chinese)</option>
+                        <option value="fa">دری (Dari)</option>
+                        <option value="ps">پښتو (Pashto)</option>
+                        <option value="pl">Polski (Polish)</option>
+                        <option value="ro">Română (Romanian)</option>
+                        <option value="sn">chiShona (Shona)</option>
+                        <option value="es">Español (Spanish)</option>
+                    </select>
                 </div>
             </div>
         </div>
+    </nav>
+
+    <!-- Slide-in sitemap menu (list rendered by js/main.js) -->
+    <div class="portal-menu-overlay" hidden></div>
+    <nav id="portal-menu-panel" class="portal-menu-panel" aria-label="Site menu" aria-hidden="true">
+        <div class="portal-menu-panel-header">
+            <span>Menu</span>
+            <button class="portal-menu-close" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="portal-menu-list" data-portal-menu></ul>
     </nav>
     
     <!-- Portal Mobile Navigation Panel -->

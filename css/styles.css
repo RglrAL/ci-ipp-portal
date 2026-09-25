@@ -5876,7 +5876,8 @@ body.ipp-about {
 .portal-menu-toggle.active span:nth-child(2) { opacity: 0; }
 .portal-menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
-/* About button */
+/* Bar links: About, Videos, Glossary */
+.portal-bar-link,
 .portal-about-link {
     color: #fff !important;
     text-decoration: none;
@@ -5886,6 +5887,8 @@ body.ipp-about {
     border-radius: 4px;
     white-space: nowrap;
 }
+.portal-bar-link:hover,
+.portal-bar-link:focus,
 .portal-about-link:hover,
 .portal-about-link:focus { background: rgba(255, 255, 255, 0.15); text-decoration: underline; }
 
