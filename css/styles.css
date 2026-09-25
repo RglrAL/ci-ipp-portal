@@ -6149,7 +6149,7 @@ body.ipp-about {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
     gap: 56px;
-    align-items: start;
+    align-items: center;
     min-height: 0;
     padding: 0;
     background: none;
@@ -6197,14 +6197,10 @@ body.ipp-about {
     overflow: hidden;
     background: transparent;
     border-radius: 8px;
-    align-self: start;
+    align-self: center;
     min-height: 0;
     max-height: none;
 }
-/* Top of the image sits level with the top of the title's letters, not the
-   text box, so nudge it down by the title's half-leading and ascender gap */
-.intro-module .intro-media { margin-top: 12px; }
-.category-intro-module .intro-media { margin-top: 9px; }
 .intro-media img {
     position: static;
     display: block;
@@ -6242,7 +6238,6 @@ body.ipp-about {
     .intro-module .intro-media,
     .category-intro-module .intro-media {
         max-width: 460px;
-        margin-top: 0;
     }
 }
 @media (max-width: 600px) {
