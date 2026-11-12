@@ -6209,16 +6209,19 @@ body.ipp-about {
     object-fit: fill;
 }
 
+/* Hero title and text sit at the top of the intro on every level, level
+   with the top of the image (the image stays centred if the text is taller) */
+.intro-module .intro-text,
+.category-intro-module .intro-text {
+    align-self: start;
+    justify-content: flex-start;
+}
+
 /* Level 3 (category pages with a link list): image a step smaller than
-   levels 1 and 2 (440px vs 480px) so the list of pages still leads.
-   Text and image are vertically centred against each other. */
+   levels 1 and 2 (440px vs 480px) so the list of pages still leads. */
 .ipp-category-list .category-intro-module .intro-content {
     grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
     gap: 48px;
-    align-items: center;
-}
-.ipp-category-list .category-intro-module .intro-text {
-    justify-content: center;
 }
 
 @media (max-width: 1100px) {
