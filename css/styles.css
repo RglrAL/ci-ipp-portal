@@ -6209,11 +6209,16 @@ body.ipp-about {
     object-fit: fill;
 }
 
-/* Level 3 (category pages with a link list): smaller image so the
-   list of pages is the dominant element */
+/* Level 3 (category pages with a link list): image a step smaller than
+   levels 1 and 2 (440px vs 480px) so the list of pages still leads.
+   Text and image are vertically centred against each other. */
 .ipp-category-list .category-intro-module .intro-content {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
     gap: 48px;
+    align-items: center;
+}
+.ipp-category-list .category-intro-module .intro-text {
+    justify-content: center;
 }
 
 @media (max-width: 1100px) {
@@ -6223,7 +6228,7 @@ body.ipp-about {
         gap: 36px;
     }
     .ipp-category-list .category-intro-module .intro-content {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
         gap: 36px;
     }
 }
@@ -6238,6 +6243,11 @@ body.ipp-about {
     .intro-module .intro-media,
     .category-intro-module .intro-media {
         max-width: 460px;
+    }
+    /* Stacked: centre the level 3 image under the text */
+    .ipp-category-list .category-intro-module .intro-media {
+        justify-self: center;
+        width: 100%;
     }
 }
 @media (max-width: 600px) {
